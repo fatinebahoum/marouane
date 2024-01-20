@@ -1,0 +1,595 @@
+[2024-01-20T06:31:52.960+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SpeedLayer.submit_spark_job manual__2024-01-20T06:31:25.837474+00:00 [queued]>
+[2024-01-20T06:31:52.966+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SpeedLayer.submit_spark_job manual__2024-01-20T06:31:25.837474+00:00 [queued]>
+[2024-01-20T06:31:52.966+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-20T06:31:52.977+0000] {taskinstance.py:1382} INFO - Executing <Task(SparkSubmitOperator): submit_spark_job> on 2024-01-20 06:31:25.837474+00:00
+[2024-01-20T06:31:52.980+0000] {standard_task_runner.py:57} INFO - Started process 15878 to run task
+[2024-01-20T06:31:52.982+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'SpeedLayer', 'submit_spark_job', 'manual__2024-01-20T06:31:25.837474+00:00', '--job-id', '972', '--raw', '--subdir', 'DAGS_FOLDER/spark_streaming_dag.py', '--cfg-path', '/tmp/tmpz201af7t']
+[2024-01-20T06:31:52.983+0000] {standard_task_runner.py:85} INFO - Job 972: Subtask submit_spark_job
+[2024-01-20T06:31:53.018+0000] {task_command.py:415} INFO - Running <TaskInstance: SpeedLayer.submit_spark_job manual__2024-01-20T06:31:25.837474+00:00 [running]> on host 45c5bfab8aa1
+[2024-01-20T06:31:53.081+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SpeedLayer' AIRFLOW_CTX_TASK_ID='submit_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2024-01-20T06:31:25.837474+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-20T06:31:25.837474+00:00'
+[2024-01-20T06:31:53.087+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2024-01-20T06:31:53.088+0000] {spark_submit.py:401} INFO - Spark-Submit cmd: spark-submit --master spark://172.19.0.4:7077 --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 --name arrow-spark --queue root.default --deploy-mode client /opt/***/shared_volume/stream.py
+[2024-01-20T06:31:53.202+0000] {spark_submit.py:571} INFO - /home/***/.local/lib/python3.9/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2024-01-20T06:31:55.035+0000] {spark_submit.py:571} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.9/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-01-20T06:31:55.124+0000] {spark_submit.py:571} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2024-01-20T06:31:55.125+0000] {spark_submit.py:571} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2024-01-20T06:31:55.128+0000] {spark_submit.py:571} INFO - com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
+[2024-01-20T06:31:55.129+0000] {spark_submit.py:571} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2024-01-20T06:31:55.130+0000] {spark_submit.py:571} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-5f585a55-ae1c-4266-a0cc-353f7d66a7df;1.0
+[2024-01-20T06:31:55.130+0000] {spark_submit.py:571} INFO - confs: [default]
+[2024-01-20T06:31:55.254+0000] {spark_submit.py:571} INFO - found com.datastax.spark#spark-cassandra-connector_2.12;3.4.1 in central
+[2024-01-20T06:31:55.277+0000] {spark_submit.py:571} INFO - found com.datastax.spark#spark-cassandra-connector-driver_2.12;3.4.1 in central
+[2024-01-20T06:31:55.296+0000] {spark_submit.py:571} INFO - found org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 in central
+[2024-01-20T06:31:55.323+0000] {spark_submit.py:571} INFO - found com.datastax.oss#java-driver-core-shaded;4.13.0 in central
+[2024-01-20T06:31:55.340+0000] {spark_submit.py:571} INFO - found com.datastax.oss#native-protocol;1.5.0 in central
+[2024-01-20T06:31:55.363+0000] {spark_submit.py:571} INFO - found com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 in central
+[2024-01-20T06:31:55.379+0000] {spark_submit.py:571} INFO - found com.typesafe#config;1.4.1 in central
+[2024-01-20T06:31:55.401+0000] {spark_submit.py:571} INFO - found org.slf4j#slf4j-api;1.7.26 in central
+[2024-01-20T06:31:55.414+0000] {spark_submit.py:571} INFO - found io.dropwizard.metrics#metrics-core;4.1.18 in central
+[2024-01-20T06:31:55.432+0000] {spark_submit.py:571} INFO - found org.hdrhistogram#HdrHistogram;2.1.12 in central
+[2024-01-20T06:31:55.443+0000] {spark_submit.py:571} INFO - found org.reactivestreams#reactive-streams;1.0.3 in central
+[2024-01-20T06:31:55.456+0000] {spark_submit.py:571} INFO - found com.github.stephenc.jcip#jcip-annotations;1.0-1 in central
+[2024-01-20T06:31:55.469+0000] {spark_submit.py:571} INFO - found com.github.spotbugs#spotbugs-annotations;3.1.12 in central
+[2024-01-20T06:31:55.483+0000] {spark_submit.py:571} INFO - found com.google.code.findbugs#jsr305;3.0.2 in central
+[2024-01-20T06:31:55.513+0000] {spark_submit.py:571} INFO - found com.datastax.oss#java-driver-mapper-runtime;4.13.0 in central
+[2024-01-20T06:31:55.525+0000] {spark_submit.py:571} INFO - found com.datastax.oss#java-driver-query-builder;4.13.0 in central
+[2024-01-20T06:31:55.537+0000] {spark_submit.py:571} INFO - found org.apache.commons#commons-lang3;3.10 in central
+[2024-01-20T06:31:55.548+0000] {spark_submit.py:571} INFO - found com.thoughtworks.paranamer#paranamer;2.8 in central
+[2024-01-20T06:31:55.555+0000] {spark_submit.py:571} INFO - found org.scala-lang#scala-reflect;2.12.11 in central
+[2024-01-20T06:31:55.577+0000] {spark_submit.py:571} INFO - found org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1 in central
+[2024-01-20T06:31:55.594+0000] {spark_submit.py:571} INFO - found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.1 in central
+[2024-01-20T06:31:55.602+0000] {spark_submit.py:571} INFO - found org.apache.kafka#kafka-clients;3.3.2 in central
+[2024-01-20T06:31:55.610+0000] {spark_submit.py:571} INFO - found org.lz4#lz4-java;1.8.0 in central
+[2024-01-20T06:31:55.618+0000] {spark_submit.py:571} INFO - found org.xerial.snappy#snappy-java;1.1.10.1 in central
+[2024-01-20T06:31:55.628+0000] {spark_submit.py:571} INFO - found org.slf4j#slf4j-api;2.0.6 in central
+[2024-01-20T06:31:55.642+0000] {spark_submit.py:571} INFO - found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+[2024-01-20T06:31:55.655+0000] {spark_submit.py:571} INFO - found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+[2024-01-20T06:31:55.665+0000] {spark_submit.py:571} INFO - found commons-logging#commons-logging;1.1.3 in central
+[2024-01-20T06:31:55.676+0000] {spark_submit.py:571} INFO - found org.apache.commons#commons-pool2;2.11.1 in central
+[2024-01-20T06:31:55.714+0000] {spark_submit.py:571} INFO - :: resolution report :: resolve 563ms :: artifacts dl 22ms
+[2024-01-20T06:31:55.715+0000] {spark_submit.py:571} INFO - :: modules in use:
+[2024-01-20T06:31:55.716+0000] {spark_submit.py:571} INFO - com.datastax.oss#java-driver-core-shaded;4.13.0 from central in [default]
+[2024-01-20T06:31:55.716+0000] {spark_submit.py:571} INFO - com.datastax.oss#java-driver-mapper-runtime;4.13.0 from central in [default]
+[2024-01-20T06:31:55.717+0000] {spark_submit.py:571} INFO - com.datastax.oss#java-driver-query-builder;4.13.0 from central in [default]
+[2024-01-20T06:31:55.717+0000] {spark_submit.py:571} INFO - com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 from central in [default]
+[2024-01-20T06:31:55.717+0000] {spark_submit.py:571} INFO - com.datastax.oss#native-protocol;1.5.0 from central in [default]
+[2024-01-20T06:31:55.718+0000] {spark_submit.py:571} INFO - com.datastax.spark#spark-cassandra-connector-driver_2.12;3.4.1 from central in [default]
+[2024-01-20T06:31:55.718+0000] {spark_submit.py:571} INFO - com.datastax.spark#spark-cassandra-connector_2.12;3.4.1 from central in [default]
+[2024-01-20T06:31:55.718+0000] {spark_submit.py:571} INFO - com.github.spotbugs#spotbugs-annotations;3.1.12 from central in [default]
+[2024-01-20T06:31:55.719+0000] {spark_submit.py:571} INFO - com.github.stephenc.jcip#jcip-annotations;1.0-1 from central in [default]
+[2024-01-20T06:31:55.719+0000] {spark_submit.py:571} INFO - com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+[2024-01-20T06:31:55.719+0000] {spark_submit.py:571} INFO - com.thoughtworks.paranamer#paranamer;2.8 from central in [default]
+[2024-01-20T06:31:55.720+0000] {spark_submit.py:571} INFO - com.typesafe#config;1.4.1 from central in [default]
+[2024-01-20T06:31:55.720+0000] {spark_submit.py:571} INFO - commons-logging#commons-logging;1.1.3 from central in [default]
+[2024-01-20T06:31:55.720+0000] {spark_submit.py:571} INFO - io.dropwizard.metrics#metrics-core;4.1.18 from central in [default]
+[2024-01-20T06:31:55.721+0000] {spark_submit.py:571} INFO - org.apache.commons#commons-lang3;3.10 from central in [default]
+[2024-01-20T06:31:55.721+0000] {spark_submit.py:571} INFO - org.apache.commons#commons-pool2;2.11.1 from central in [default]
+[2024-01-20T06:31:55.721+0000] {spark_submit.py:571} INFO - org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+[2024-01-20T06:31:55.722+0000] {spark_submit.py:571} INFO - org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+[2024-01-20T06:31:55.722+0000] {spark_submit.py:571} INFO - org.apache.kafka#kafka-clients;3.3.2 from central in [default]
+[2024-01-20T06:31:55.722+0000] {spark_submit.py:571} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1 from central in [default]
+[2024-01-20T06:31:55.723+0000] {spark_submit.py:571} INFO - org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.1 from central in [default]
+[2024-01-20T06:31:55.723+0000] {spark_submit.py:571} INFO - org.hdrhistogram#HdrHistogram;2.1.12 from central in [default]
+[2024-01-20T06:31:55.724+0000] {spark_submit.py:571} INFO - org.lz4#lz4-java;1.8.0 from central in [default]
+[2024-01-20T06:31:55.724+0000] {spark_submit.py:571} INFO - org.reactivestreams#reactive-streams;1.0.3 from central in [default]
+[2024-01-20T06:31:55.724+0000] {spark_submit.py:571} INFO - org.scala-lang#scala-reflect;2.12.11 from central in [default]
+[2024-01-20T06:31:55.725+0000] {spark_submit.py:571} INFO - org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 from central in [default]
+[2024-01-20T06:31:55.725+0000] {spark_submit.py:571} INFO - org.slf4j#slf4j-api;2.0.6 from central in [default]
+[2024-01-20T06:31:55.726+0000] {spark_submit.py:571} INFO - org.xerial.snappy#snappy-java;1.1.10.1 from central in [default]
+[2024-01-20T06:31:55.726+0000] {spark_submit.py:571} INFO - :: evicted modules:
+[2024-01-20T06:31:55.726+0000] {spark_submit.py:571} INFO - org.slf4j#slf4j-api;1.7.26 by [org.slf4j#slf4j-api;2.0.6] in [default]
+[2024-01-20T06:31:55.727+0000] {spark_submit.py:571} INFO - com.google.code.findbugs#jsr305;3.0.0 by [com.google.code.findbugs#jsr305;3.0.2] in [default]
+[2024-01-20T06:31:55.727+0000] {spark_submit.py:571} INFO - ---------------------------------------------------------------------
+[2024-01-20T06:31:55.727+0000] {spark_submit.py:571} INFO - |                  |            modules            ||   artifacts   |
+[2024-01-20T06:31:55.728+0000] {spark_submit.py:571} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-01-20T06:31:55.728+0000] {spark_submit.py:571} INFO - ---------------------------------------------------------------------
+[2024-01-20T06:31:55.729+0000] {spark_submit.py:571} INFO - |      default     |   30  |   0   |   0   |   2   ||   28  |   0   |
+[2024-01-20T06:31:55.729+0000] {spark_submit.py:571} INFO - ---------------------------------------------------------------------
+[2024-01-20T06:31:55.729+0000] {spark_submit.py:571} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-5f585a55-ae1c-4266-a0cc-353f7d66a7df
+[2024-01-20T06:31:55.729+0000] {spark_submit.py:571} INFO - confs: [default]
+[2024-01-20T06:31:55.736+0000] {spark_submit.py:571} INFO - 0 artifacts copied, 28 already retrieved (0kB/9ms)
+[2024-01-20T06:31:55.930+0000] {spark_submit.py:571} INFO - 24/01/20 06:31:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-01-20T06:31:59.443+0000] {spark_submit.py:571} INFO - 2024-01-20 06:31:59.442915: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[2024-01-20T06:31:59.488+0000] {spark_submit.py:571} INFO - 2024-01-20 06:31:59.488695: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+[2024-01-20T06:31:59.713+0000] {spark_submit.py:571} INFO - 2024-01-20 06:31:59.713809: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+[2024-01-20T06:31:59.714+0000] {spark_submit.py:571} INFO - 2024-01-20 06:31:59.713877: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+[2024-01-20T06:31:59.760+0000] {spark_submit.py:571} INFO - 2024-01-20 06:31:59.760213: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[2024-01-20T06:31:59.868+0000] {spark_submit.py:571} INFO - 2024-01-20 06:31:59.868551: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+[2024-01-20T06:31:59.869+0000] {spark_submit.py:571} INFO - 2024-01-20 06:31:59.869537: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[2024-01-20T06:31:59.870+0000] {spark_submit.py:571} INFO - To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[2024-01-20T06:32:01.122+0000] {spark_submit.py:571} INFO - 2024-01-20 06:32:01.122244: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[2024-01-20T06:32:03.678+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SparkContext: Running Spark version 3.5.0
+[2024-01-20T06:32:03.679+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SparkContext: OS info Linux, 5.10.16.3-microsoft-standard-WSL2, amd64
+[2024-01-20T06:32:03.679+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SparkContext: Java version 11.0.21
+[2024-01-20T06:32:03.697+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO ResourceUtils: ==============================================================
+[2024-01-20T06:32:03.698+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-01-20T06:32:03.698+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO ResourceUtils: ==============================================================
+[2024-01-20T06:32:03.699+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SparkContext: Submitted application: SpeedLayerProcessor
+[2024-01-20T06:32:03.717+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-01-20T06:32:03.728+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO ResourceProfile: Limiting resource is cpu
+[2024-01-20T06:32:03.728+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-01-20T06:32:03.792+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SecurityManager: Changing view acls to: ***
+[2024-01-20T06:32:03.793+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SecurityManager: Changing modify acls to: ***
+[2024-01-20T06:32:03.793+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SecurityManager: Changing view acls groups to:
+[2024-01-20T06:32:03.794+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SecurityManager: Changing modify acls groups to:
+[2024-01-20T06:32:03.794+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2024-01-20T06:32:03.990+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:03 INFO Utils: Successfully started service 'sparkDriver' on port 42171.
+[2024-01-20T06:32:04.026+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkEnv: Registering MapOutputTracker
+[2024-01-20T06:32:04.065+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkEnv: Registering BlockManagerMaster
+[2024-01-20T06:32:04.086+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-01-20T06:32:04.087+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-01-20T06:32:04.090+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-01-20T06:32:04.124+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-44e5bc1e-ac9c-40e7-b351-6af71eaf7ac1
+[2024-01-20T06:32:04.140+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2024-01-20T06:32:04.156+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-01-20T06:32:04.306+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-01-20T06:32:04.365+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-01-20T06:32:04.395+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar at spark://45c5bfab8aa1:42171/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.396+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar at spark://45c5bfab8aa1:42171/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.396+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar at spark://45c5bfab8aa1:42171/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.396+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar at spark://45c5bfab8aa1:42171/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.397+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.13.0.jar at spark://45c5bfab8aa1:42171/jars/com.datastax.oss_java-driver-core-shaded-4.13.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.399+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar at spark://45c5bfab8aa1:42171/jars/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.399+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar at spark://45c5bfab8aa1:42171/jars/org.apache.commons_commons-lang3-3.10.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.400+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar at spark://45c5bfab8aa1:42171/jars/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.400+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar at spark://45c5bfab8aa1:42171/jars/org.scala-lang_scala-reflect-2.12.11.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.400+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar at spark://45c5bfab8aa1:42171/jars/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.401+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar at spark://45c5bfab8aa1:42171/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.401+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar at spark://45c5bfab8aa1:42171/jars/com.typesafe_config-1.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.401+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar at spark://45c5bfab8aa1:42171/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.401+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar at spark://45c5bfab8aa1:42171/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.401+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar at spark://45c5bfab8aa1:42171/jars/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.402+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar at spark://45c5bfab8aa1:42171/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.402+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar at spark://45c5bfab8aa1:42171/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.402+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar at spark://45c5bfab8aa1:42171/jars/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.403+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.13.0.jar at spark://45c5bfab8aa1:42171/jars/com.datastax.oss_java-driver-query-builder-4.13.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.403+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar at spark://45c5bfab8aa1:42171/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.403+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar at spark://45c5bfab8aa1:42171/jars/org.apache.kafka_kafka-clients-3.3.2.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.403+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://45c5bfab8aa1:42171/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.404+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://45c5bfab8aa1:42171/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.404+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://45c5bfab8aa1:42171/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.404+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.1.jar at spark://45c5bfab8aa1:42171/jars/org.xerial.snappy_snappy-java-1.1.10.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.405+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar at spark://45c5bfab8aa1:42171/jars/org.slf4j_slf4j-api-2.0.6.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.405+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://45c5bfab8aa1:42171/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.405+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://45c5bfab8aa1:42171/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.406+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar at spark://45c5bfab8aa1:42171/files/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.406+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar
+[2024-01-20T06:32:04.422+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar at spark://45c5bfab8aa1:42171/files/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.423+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar
+[2024-01-20T06:32:04.427+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar at spark://45c5bfab8aa1:42171/files/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.427+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar
+[2024-01-20T06:32:04.433+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar at spark://45c5bfab8aa1:42171/files/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.433+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar
+[2024-01-20T06:32:04.437+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.13.0.jar at spark://45c5bfab8aa1:42171/files/com.datastax.oss_java-driver-core-shaded-4.13.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.438+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.13.0.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.datastax.oss_java-driver-core-shaded-4.13.0.jar
+[2024-01-20T06:32:04.456+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar at spark://45c5bfab8aa1:42171/files/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.457+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar
+[2024-01-20T06:32:04.460+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar at spark://45c5bfab8aa1:42171/files/org.apache.commons_commons-lang3-3.10.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.460+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.apache.commons_commons-lang3-3.10.jar
+[2024-01-20T06:32:04.464+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar at spark://45c5bfab8aa1:42171/files/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.465+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.thoughtworks.paranamer_paranamer-2.8.jar
+[2024-01-20T06:32:04.468+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar at spark://45c5bfab8aa1:42171/files/org.scala-lang_scala-reflect-2.12.11.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.475+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.scala-lang_scala-reflect-2.12.11.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.scala-lang_scala-reflect-2.12.11.jar
+[2024-01-20T06:32:04.480+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar at spark://45c5bfab8aa1:42171/files/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.481+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.datastax.oss_native-protocol-1.5.0.jar
+[2024-01-20T06:32:04.493+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar at spark://45c5bfab8aa1:42171/files/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.494+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar
+[2024-01-20T06:32:04.503+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar at spark://45c5bfab8aa1:42171/files/com.typesafe_config-1.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.503+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.typesafe_config-1.4.1.jar
+[2024-01-20T06:32:04.507+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar at spark://45c5bfab8aa1:42171/files/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.507+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/io.dropwizard.metrics_metrics-core-4.1.18.jar
+[2024-01-20T06:32:04.510+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar at spark://45c5bfab8aa1:42171/files/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.511+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.hdrhistogram_HdrHistogram-2.1.12.jar
+[2024-01-20T06:32:04.513+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar at spark://45c5bfab8aa1:42171/files/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.514+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.reactivestreams_reactive-streams-1.0.3.jar
+[2024-01-20T06:32:04.516+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar at spark://45c5bfab8aa1:42171/files/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.516+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar
+[2024-01-20T06:32:04.518+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar at spark://45c5bfab8aa1:42171/files/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.519+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.github.spotbugs_spotbugs-annotations-3.1.12.jar
+[2024-01-20T06:32:04.521+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar at spark://45c5bfab8aa1:42171/files/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.521+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.google.code.findbugs_jsr305-3.0.2.jar
+[2024-01-20T06:32:04.523+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.13.0.jar at spark://45c5bfab8aa1:42171/files/com.datastax.oss_java-driver-query-builder-4.13.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.524+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.13.0.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/com.datastax.oss_java-driver-query-builder-4.13.0.jar
+[2024-01-20T06:32:04.527+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar at spark://45c5bfab8aa1:42171/files/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.528+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar
+[2024-01-20T06:32:04.531+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar at spark://45c5bfab8aa1:42171/files/org.apache.kafka_kafka-clients-3.3.2.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.531+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.apache.kafka_kafka-clients-3.3.2.jar
+[2024-01-20T06:32:04.546+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://45c5bfab8aa1:42171/files/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.547+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.apache.commons_commons-pool2-2.11.1.jar
+[2024-01-20T06:32:04.549+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://45c5bfab8aa1:42171/files/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.550+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+[2024-01-20T06:32:04.627+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://45c5bfab8aa1:42171/files/org.lz4_lz4-java-1.8.0.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.628+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.lz4_lz4-java-1.8.0.jar
+[2024-01-20T06:32:04.632+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.1.jar at spark://45c5bfab8aa1:42171/files/org.xerial.snappy_snappy-java-1.1.10.1.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.633+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.1.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.xerial.snappy_snappy-java-1.1.10.1.jar
+[2024-01-20T06:32:04.641+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar at spark://45c5bfab8aa1:42171/files/org.slf4j_slf4j-api-2.0.6.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.641+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.slf4j_slf4j-api-2.0.6.jar
+[2024-01-20T06:32:04.645+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://45c5bfab8aa1:42171/files/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.645+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+[2024-01-20T06:32:04.693+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO SparkContext: Added file file:///home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://45c5bfab8aa1:42171/files/commons-logging_commons-logging-1.1.3.jar with timestamp 1705732323671
+[2024-01-20T06:32:04.693+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Copying /home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-399d11bf-f391-46fe-8f45-40d6c89c7136/userFiles-dffd8f2c-3bb0-466a-911e-1b2af5fb4219/commons-logging_commons-logging-1.1.3.jar
+[2024-01-20T06:32:04.768+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://172.19.0.4:7077...
+[2024-01-20T06:32:04.808+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO TransportClientFactory: Successfully created connection to /172.19.0.4:7077 after 25 ms (0 ms spent in bootstraps)
+[2024-01-20T06:32:04.884+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20240120063204-0023
+[2024-01-20T06:32:04.885+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240120063204-0023/0 on worker-20240120035805-172.19.0.7-35915 (172.19.0.7:35915) with 2 core(s)
+[2024-01-20T06:32:04.887+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO StandaloneSchedulerBackend: Granted executor ID app-20240120063204-0023/0 on hostPort 172.19.0.7:35915 with 2 core(s), 1024.0 MiB RAM
+[2024-01-20T06:32:04.892+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41719.
+[2024-01-20T06:32:04.893+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO NettyBlockTransferService: Server created on 45c5bfab8aa1:41719
+[2024-01-20T06:32:04.895+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-01-20T06:32:04.903+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 45c5bfab8aa1, 41719, None)
+[2024-01-20T06:32:04.907+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO BlockManagerMasterEndpoint: Registering block manager 45c5bfab8aa1:41719 with 434.4 MiB RAM, BlockManagerId(driver, 45c5bfab8aa1, 41719, None)
+[2024-01-20T06:32:04.909+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 45c5bfab8aa1, 41719, None)
+[2024-01-20T06:32:04.910+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 45c5bfab8aa1, 41719, None)
+[2024-01-20T06:32:04.963+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:04 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240120063204-0023/0 is now RUNNING
+[2024-01-20T06:32:05.142+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:05 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2024-01-20T06:32:05.500+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:05 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2024-01-20T06:32:05.502+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:05 INFO SharedState: Warehouse path is 'file:/opt/***/spark-warehouse'.
+[2024-01-20T06:32:07.906+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:07 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+[2024-01-20T06:32:07.955+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:07 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-46465c5d-5962-4ddb-a530-2b8389403636. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+[2024-01-20T06:32:07.997+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:07 INFO ResolveWriteToStream: Checkpoint root file:///tmp/temporary-46465c5d-5962-4ddb-a530-2b8389403636 resolved to file:/tmp/temporary-46465c5d-5962-4ddb-a530-2b8389403636.
+[2024-01-20T06:32:07.998+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:07 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[2024-01-20T06:32:08.129+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.7:34928) with ID 0,  ResourceProfileId 0
+[2024-01-20T06:32:08.144+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-46465c5d-5962-4ddb-a530-2b8389403636/metadata using temp file file:/tmp/temporary-46465c5d-5962-4ddb-a530-2b8389403636/.metadata.b8151777-9e00-4c3a-b837-330fceccab91.tmp
+[2024-01-20T06:32:08.210+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO BlockManagerMasterEndpoint: Registering block manager 172.19.0.7:43817 with 434.4 MiB RAM, BlockManagerId(0, 172.19.0.7, 43817, None)
+[2024-01-20T06:32:08.245+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-46465c5d-5962-4ddb-a530-2b8389403636/.metadata.b8151777-9e00-4c3a-b837-330fceccab91.tmp to file:/tmp/temporary-46465c5d-5962-4ddb-a530-2b8389403636/metadata
+[2024-01-20T06:32:08.279+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO MicroBatchExecution: Starting [id = 9950a34a-54d6-435b-a211-2bd2b1146f8a, runId = 86843340-7cf8-4147-b9a9-02bafabd5aca]. Use file:/tmp/temporary-46465c5d-5962-4ddb-a530-2b8389403636 to store the query checkpoint.
+[2024-01-20T06:32:08.301+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@2c84f10e] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@75651b84]
+[2024-01-20T06:32:08.346+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO OffsetSeqLog: BatchIds found from listing:
+[2024-01-20T06:32:08.348+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO OffsetSeqLog: BatchIds found from listing:
+[2024-01-20T06:32:08.349+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO MicroBatchExecution: Starting new streaming query.
+[2024-01-20T06:32:08.352+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO MicroBatchExecution: Stream started from {}
+[2024-01-20T06:32:08.376+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-e86a7373-5ad0-426a-8ff2-b9a40bc23e40. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+[2024-01-20T06:32:08.376+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO ResolveWriteToStream: Checkpoint root file:///tmp/temporary-e86a7373-5ad0-426a-8ff2-b9a40bc23e40 resolved to file:/tmp/temporary-e86a7373-5ad0-426a-8ff2-b9a40bc23e40.
+[2024-01-20T06:32:08.377+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+[2024-01-20T06:32:08.385+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-e86a7373-5ad0-426a-8ff2-b9a40bc23e40/metadata using temp file file:/tmp/temporary-e86a7373-5ad0-426a-8ff2-b9a40bc23e40/.metadata.07cbe8fb-88cb-4557-a92a-f1d71f782a83.tmp
+[2024-01-20T06:32:08.409+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-e86a7373-5ad0-426a-8ff2-b9a40bc23e40/.metadata.07cbe8fb-88cb-4557-a92a-f1d71f782a83.tmp to file:/tmp/temporary-e86a7373-5ad0-426a-8ff2-b9a40bc23e40/metadata
+[2024-01-20T06:32:08.420+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO MicroBatchExecution: Starting [id = cba7a9e2-0587-4f8b-87f6-129ce0a504b1, runId = 29a5b3d2-f144-4ecb-904a-54e8f5acd57c]. Use file:/tmp/temporary-e86a7373-5ad0-426a-8ff2-b9a40bc23e40 to store the query checkpoint.
+[2024-01-20T06:32:08.423+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@1880d6a5] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@16473a1d]
+[2024-01-20T06:32:08.426+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO OffsetSeqLog: BatchIds found from listing:
+[2024-01-20T06:32:08.427+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO OffsetSeqLog: BatchIds found from listing:
+[2024-01-20T06:32:08.427+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO MicroBatchExecution: Starting new streaming query.
+[2024-01-20T06:32:08.427+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO MicroBatchExecution: Stream started from {}
+[2024-01-20T06:32:08.819+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO AdminClientConfig: AdminClientConfig values:
+[2024-01-20T06:32:08.820+0000] {spark_submit.py:571} INFO - bootstrap.servers = [localhost:9092]
+[2024-01-20T06:32:08.820+0000] {spark_submit.py:571} INFO - client.dns.lookup = use_all_dns_ips
+[2024-01-20T06:32:08.821+0000] {spark_submit.py:571} INFO - client.id =
+[2024-01-20T06:32:08.821+0000] {spark_submit.py:571} INFO - connections.max.idle.ms = 300000
+[2024-01-20T06:32:08.822+0000] {spark_submit.py:571} INFO - default.api.timeout.ms = 60000
+[2024-01-20T06:32:08.822+0000] {spark_submit.py:571} INFO - metadata.max.age.ms = 300000
+[2024-01-20T06:32:08.822+0000] {spark_submit.py:571} INFO - metric.reporters = []
+[2024-01-20T06:32:08.823+0000] {spark_submit.py:571} INFO - metrics.num.samples = 2
+[2024-01-20T06:32:08.823+0000] {spark_submit.py:571} INFO - metrics.recording.level = INFO
+[2024-01-20T06:32:08.823+0000] {spark_submit.py:571} INFO - metrics.sample.window.ms = 30000
+[2024-01-20T06:32:08.824+0000] {spark_submit.py:571} INFO - receive.buffer.bytes = 65536
+[2024-01-20T06:32:08.824+0000] {spark_submit.py:571} INFO - reconnect.backoff.max.ms = 1000
+[2024-01-20T06:32:08.825+0000] {spark_submit.py:571} INFO - reconnect.backoff.ms = 50
+[2024-01-20T06:32:08.825+0000] {spark_submit.py:571} INFO - request.timeout.ms = 30000
+[2024-01-20T06:32:08.826+0000] {spark_submit.py:571} INFO - retries = 2147483647
+[2024-01-20T06:32:08.826+0000] {spark_submit.py:571} INFO - retry.backoff.ms = 100
+[2024-01-20T06:32:08.826+0000] {spark_submit.py:571} INFO - sasl.client.callback.handler.class = null
+[2024-01-20T06:32:08.827+0000] {spark_submit.py:571} INFO - sasl.jaas.config = null
+[2024-01-20T06:32:08.827+0000] {spark_submit.py:571} INFO - sasl.kerberos.kinit.cmd = /usr/bin/kinit
+[2024-01-20T06:32:08.828+0000] {spark_submit.py:571} INFO - sasl.kerberos.min.time.before.relogin = 60000
+[2024-01-20T06:32:08.828+0000] {spark_submit.py:571} INFO - sasl.kerberos.service.name = null
+[2024-01-20T06:32:08.829+0000] {spark_submit.py:571} INFO - sasl.kerberos.ticket.renew.jitter = 0.05
+[2024-01-20T06:32:08.829+0000] {spark_submit.py:571} INFO - sasl.kerberos.ticket.renew.window.factor = 0.8
+[2024-01-20T06:32:08.830+0000] {spark_submit.py:571} INFO - sasl.login.callback.handler.class = null
+[2024-01-20T06:32:08.830+0000] {spark_submit.py:571} INFO - sasl.login.class = null
+[2024-01-20T06:32:08.831+0000] {spark_submit.py:571} INFO - sasl.login.connect.timeout.ms = null
+[2024-01-20T06:32:08.831+0000] {spark_submit.py:571} INFO - sasl.login.read.timeout.ms = null
+[2024-01-20T06:32:08.832+0000] {spark_submit.py:571} INFO - sasl.login.refresh.buffer.seconds = 300
+[2024-01-20T06:32:08.832+0000] {spark_submit.py:571} INFO - sasl.login.refresh.min.period.seconds = 60
+[2024-01-20T06:32:08.832+0000] {spark_submit.py:571} INFO - sasl.login.refresh.window.factor = 0.8
+[2024-01-20T06:32:08.833+0000] {spark_submit.py:571} INFO - sasl.login.refresh.window.jitter = 0.05
+[2024-01-20T06:32:08.833+0000] {spark_submit.py:571} INFO - sasl.login.retry.backoff.max.ms = 10000
+[2024-01-20T06:32:08.834+0000] {spark_submit.py:571} INFO - sasl.login.retry.backoff.ms = 100
+[2024-01-20T06:32:08.834+0000] {spark_submit.py:571} INFO - sasl.mechanism = GSSAPI
+[2024-01-20T06:32:08.835+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.clock.skew.seconds = 30
+[2024-01-20T06:32:08.835+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.expected.audience = null
+[2024-01-20T06:32:08.835+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.expected.issuer = null
+[2024-01-20T06:32:08.836+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+[2024-01-20T06:32:08.836+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+[2024-01-20T06:32:08.836+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+[2024-01-20T06:32:08.837+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.jwks.endpoint.url = null
+[2024-01-20T06:32:08.837+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.scope.claim.name = scope
+[2024-01-20T06:32:08.838+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.sub.claim.name = sub
+[2024-01-20T06:32:08.838+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.token.endpoint.url = null
+[2024-01-20T06:32:08.839+0000] {spark_submit.py:571} INFO - security.protocol = PLAINTEXT
+[2024-01-20T06:32:08.839+0000] {spark_submit.py:571} INFO - security.providers = null
+[2024-01-20T06:32:08.839+0000] {spark_submit.py:571} INFO - send.buffer.bytes = 131072
+[2024-01-20T06:32:08.840+0000] {spark_submit.py:571} INFO - socket.connection.setup.timeout.max.ms = 30000
+[2024-01-20T06:32:08.840+0000] {spark_submit.py:571} INFO - socket.connection.setup.timeout.ms = 10000
+[2024-01-20T06:32:08.840+0000] {spark_submit.py:571} INFO - ssl.cipher.suites = null
+[2024-01-20T06:32:08.841+0000] {spark_submit.py:571} INFO - ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+[2024-01-20T06:32:08.841+0000] {spark_submit.py:571} INFO - ssl.endpoint.identification.algorithm = https
+[2024-01-20T06:32:08.842+0000] {spark_submit.py:571} INFO - ssl.engine.factory.class = null
+[2024-01-20T06:32:08.842+0000] {spark_submit.py:571} INFO - ssl.key.password = null
+[2024-01-20T06:32:08.843+0000] {spark_submit.py:571} INFO - ssl.keymanager.algorithm = SunX509
+[2024-01-20T06:32:08.843+0000] {spark_submit.py:571} INFO - ssl.keystore.certificate.chain = null
+[2024-01-20T06:32:08.843+0000] {spark_submit.py:571} INFO - ssl.keystore.key = null
+[2024-01-20T06:32:08.844+0000] {spark_submit.py:571} INFO - ssl.keystore.location = null
+[2024-01-20T06:32:08.844+0000] {spark_submit.py:571} INFO - ssl.keystore.password = null
+[2024-01-20T06:32:08.844+0000] {spark_submit.py:571} INFO - ssl.keystore.type = JKS
+[2024-01-20T06:32:08.845+0000] {spark_submit.py:571} INFO - ssl.protocol = TLSv1.3
+[2024-01-20T06:32:08.846+0000] {spark_submit.py:571} INFO - ssl.provider = null
+[2024-01-20T06:32:08.846+0000] {spark_submit.py:571} INFO - ssl.secure.random.implementation = null
+[2024-01-20T06:32:08.847+0000] {spark_submit.py:571} INFO - ssl.trustmanager.algorithm = PKIX
+[2024-01-20T06:32:08.847+0000] {spark_submit.py:571} INFO - ssl.truststore.certificates = null
+[2024-01-20T06:32:08.847+0000] {spark_submit.py:571} INFO - ssl.truststore.location = null
+[2024-01-20T06:32:08.848+0000] {spark_submit.py:571} INFO - ssl.truststore.password = null
+[2024-01-20T06:32:08.848+0000] {spark_submit.py:571} INFO - ssl.truststore.type = JKS
+[2024-01-20T06:32:08.849+0000] {spark_submit.py:571} INFO - 
+[2024-01-20T06:32:08.849+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO AdminClientConfig: AdminClientConfig values:
+[2024-01-20T06:32:08.849+0000] {spark_submit.py:571} INFO - bootstrap.servers = [localhost:9092]
+[2024-01-20T06:32:08.850+0000] {spark_submit.py:571} INFO - client.dns.lookup = use_all_dns_ips
+[2024-01-20T06:32:08.850+0000] {spark_submit.py:571} INFO - client.id =
+[2024-01-20T06:32:08.851+0000] {spark_submit.py:571} INFO - connections.max.idle.ms = 300000
+[2024-01-20T06:32:08.851+0000] {spark_submit.py:571} INFO - default.api.timeout.ms = 60000
+[2024-01-20T06:32:08.852+0000] {spark_submit.py:571} INFO - metadata.max.age.ms = 300000
+[2024-01-20T06:32:08.852+0000] {spark_submit.py:571} INFO - metric.reporters = []
+[2024-01-20T06:32:08.852+0000] {spark_submit.py:571} INFO - metrics.num.samples = 2
+[2024-01-20T06:32:08.853+0000] {spark_submit.py:571} INFO - metrics.recording.level = INFO
+[2024-01-20T06:32:08.853+0000] {spark_submit.py:571} INFO - metrics.sample.window.ms = 30000
+[2024-01-20T06:32:08.853+0000] {spark_submit.py:571} INFO - receive.buffer.bytes = 65536
+[2024-01-20T06:32:08.854+0000] {spark_submit.py:571} INFO - reconnect.backoff.max.ms = 1000
+[2024-01-20T06:32:08.854+0000] {spark_submit.py:571} INFO - reconnect.backoff.ms = 50
+[2024-01-20T06:32:08.855+0000] {spark_submit.py:571} INFO - request.timeout.ms = 30000
+[2024-01-20T06:32:08.855+0000] {spark_submit.py:571} INFO - retries = 2147483647
+[2024-01-20T06:32:08.856+0000] {spark_submit.py:571} INFO - retry.backoff.ms = 100
+[2024-01-20T06:32:08.856+0000] {spark_submit.py:571} INFO - sasl.client.callback.handler.class = null
+[2024-01-20T06:32:08.856+0000] {spark_submit.py:571} INFO - sasl.jaas.config = null
+[2024-01-20T06:32:08.857+0000] {spark_submit.py:571} INFO - sasl.kerberos.kinit.cmd = /usr/bin/kinit
+[2024-01-20T06:32:08.857+0000] {spark_submit.py:571} INFO - sasl.kerberos.min.time.before.relogin = 60000
+[2024-01-20T06:32:08.857+0000] {spark_submit.py:571} INFO - sasl.kerberos.service.name = null
+[2024-01-20T06:32:08.858+0000] {spark_submit.py:571} INFO - sasl.kerberos.ticket.renew.jitter = 0.05
+[2024-01-20T06:32:08.858+0000] {spark_submit.py:571} INFO - sasl.kerberos.ticket.renew.window.factor = 0.8
+[2024-01-20T06:32:08.859+0000] {spark_submit.py:571} INFO - sasl.login.callback.handler.class = null
+[2024-01-20T06:32:08.860+0000] {spark_submit.py:571} INFO - sasl.login.class = null
+[2024-01-20T06:32:08.860+0000] {spark_submit.py:571} INFO - sasl.login.connect.timeout.ms = null
+[2024-01-20T06:32:08.861+0000] {spark_submit.py:571} INFO - sasl.login.read.timeout.ms = null
+[2024-01-20T06:32:08.861+0000] {spark_submit.py:571} INFO - sasl.login.refresh.buffer.seconds = 300
+[2024-01-20T06:32:08.861+0000] {spark_submit.py:571} INFO - sasl.login.refresh.min.period.seconds = 60
+[2024-01-20T06:32:08.862+0000] {spark_submit.py:571} INFO - sasl.login.refresh.window.factor = 0.8
+[2024-01-20T06:32:08.862+0000] {spark_submit.py:571} INFO - sasl.login.refresh.window.jitter = 0.05
+[2024-01-20T06:32:08.862+0000] {spark_submit.py:571} INFO - sasl.login.retry.backoff.max.ms = 10000
+[2024-01-20T06:32:08.863+0000] {spark_submit.py:571} INFO - sasl.login.retry.backoff.ms = 100
+[2024-01-20T06:32:08.863+0000] {spark_submit.py:571} INFO - sasl.mechanism = GSSAPI
+[2024-01-20T06:32:08.864+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.clock.skew.seconds = 30
+[2024-01-20T06:32:08.864+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.expected.audience = null
+[2024-01-20T06:32:08.864+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.expected.issuer = null
+[2024-01-20T06:32:08.865+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+[2024-01-20T06:32:08.865+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+[2024-01-20T06:32:08.866+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+[2024-01-20T06:32:08.867+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.jwks.endpoint.url = null
+[2024-01-20T06:32:08.867+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.scope.claim.name = scope
+[2024-01-20T06:32:08.868+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.sub.claim.name = sub
+[2024-01-20T06:32:08.868+0000] {spark_submit.py:571} INFO - sasl.oauthbearer.token.endpoint.url = null
+[2024-01-20T06:32:08.869+0000] {spark_submit.py:571} INFO - security.protocol = PLAINTEXT
+[2024-01-20T06:32:08.869+0000] {spark_submit.py:571} INFO - security.providers = null
+[2024-01-20T06:32:08.870+0000] {spark_submit.py:571} INFO - send.buffer.bytes = 131072
+[2024-01-20T06:32:08.870+0000] {spark_submit.py:571} INFO - socket.connection.setup.timeout.max.ms = 30000
+[2024-01-20T06:32:08.870+0000] {spark_submit.py:571} INFO - socket.connection.setup.timeout.ms = 10000
+[2024-01-20T06:32:08.871+0000] {spark_submit.py:571} INFO - ssl.cipher.suites = null
+[2024-01-20T06:32:08.871+0000] {spark_submit.py:571} INFO - ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+[2024-01-20T06:32:08.872+0000] {spark_submit.py:571} INFO - ssl.endpoint.identification.algorithm = https
+[2024-01-20T06:32:08.872+0000] {spark_submit.py:571} INFO - ssl.engine.factory.class = null
+[2024-01-20T06:32:08.872+0000] {spark_submit.py:571} INFO - ssl.key.password = null
+[2024-01-20T06:32:08.873+0000] {spark_submit.py:571} INFO - ssl.keymanager.algorithm = SunX509
+[2024-01-20T06:32:08.873+0000] {spark_submit.py:571} INFO - ssl.keystore.certificate.chain = null
+[2024-01-20T06:32:08.874+0000] {spark_submit.py:571} INFO - ssl.keystore.key = null
+[2024-01-20T06:32:08.874+0000] {spark_submit.py:571} INFO - ssl.keystore.location = null
+[2024-01-20T06:32:08.875+0000] {spark_submit.py:571} INFO - ssl.keystore.password = null
+[2024-01-20T06:32:08.876+0000] {spark_submit.py:571} INFO - ssl.keystore.type = JKS
+[2024-01-20T06:32:08.876+0000] {spark_submit.py:571} INFO - ssl.protocol = TLSv1.3
+[2024-01-20T06:32:08.877+0000] {spark_submit.py:571} INFO - ssl.provider = null
+[2024-01-20T06:32:08.877+0000] {spark_submit.py:571} INFO - ssl.secure.random.implementation = null
+[2024-01-20T06:32:08.877+0000] {spark_submit.py:571} INFO - ssl.trustmanager.algorithm = PKIX
+[2024-01-20T06:32:08.878+0000] {spark_submit.py:571} INFO - ssl.truststore.certificates = null
+[2024-01-20T06:32:08.878+0000] {spark_submit.py:571} INFO - ssl.truststore.location = null
+[2024-01-20T06:32:08.878+0000] {spark_submit.py:571} INFO - ssl.truststore.password = null
+[2024-01-20T06:32:08.879+0000] {spark_submit.py:571} INFO - ssl.truststore.type = JKS
+[2024-01-20T06:32:08.879+0000] {spark_submit.py:571} INFO - 
+[2024-01-20T06:32:08.925+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[2024-01-20T06:32:08.926+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+[2024-01-20T06:32:08.929+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO AppInfoParser: Kafka version: 3.3.2
+[2024-01-20T06:32:08.930+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO AppInfoParser: Kafka commitId: b66af662e61082cb
+[2024-01-20T06:32:08.931+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO AppInfoParser: Kafka startTimeMs: 1705732328925
+[2024-01-20T06:32:08.932+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO AppInfoParser: Kafka version: 3.3.2
+[2024-01-20T06:32:08.933+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO AppInfoParser: Kafka commitId: b66af662e61082cb
+[2024-01-20T06:32:08.933+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO AppInfoParser: Kafka startTimeMs: 1705732328925
+[2024-01-20T06:32:08.980+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:08.981+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:08.984+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:08.984+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:08 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:09.099+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:09.099+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:09.100+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:09.100+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:09.200+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:09.201+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:09.301+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:09.301+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:09.401+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:09.402+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:09.602+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:09.603+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:09.803+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:09.804+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:09 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:10.005+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:10 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:10.005+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:10 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:10.507+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:10 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:10.508+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:10 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:10.808+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:10 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:10.809+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:10 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:11.611+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:11 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:11.611+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:11 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:11.711+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:11 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:11.711+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:11 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:12.715+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:12 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:12.726+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:12 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:12.815+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:12 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:12.816+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:12 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:13.618+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:13 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:13.618+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:13 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:13.919+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:13 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:13.919+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:13 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:14.522+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:14 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:14.522+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:14 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:14.823+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:14 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:14.823+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:14 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:15.525+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:15 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:15.526+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:15 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:15.726+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:15 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:15.726+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:15 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:16.428+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:16 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:16.429+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:16 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:16.930+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:16 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:16.930+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:16 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:17.432+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:17 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:17.432+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:17 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:18.134+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:18 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:18.135+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:18 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:18.435+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:18 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:18.436+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:18 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:19.138+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:19 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:19.139+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:19 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:19.340+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:19 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:19.341+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:19 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:20.041+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:20 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:20.042+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:20 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:20.344+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:20 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:20.345+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:20 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:21.146+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:21 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:21.147+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:21 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:21.347+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:21 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:21.348+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:21 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:22.249+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:22 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:22.250+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:22 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:22.350+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:22 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:22.350+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:22 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:23.353+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:23 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:23.353+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:23 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:23.453+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:23 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:23.453+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:23 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:24.356+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:24 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:24.356+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:24 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:24.556+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:24 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:24.557+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:24 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:25.258+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:25 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:25.259+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:25 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:25.759+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:25 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:25.760+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:25 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:26.362+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:26 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:26.363+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:26 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:26.863+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:26 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:26.863+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:26 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:27.365+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:27 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:27.366+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:27 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:27.966+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:27 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:27.967+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:27 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:28.368+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:28 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:28.369+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:28 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:29.174+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:29 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:29.175+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:29 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:29.375+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:29 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:29.375+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:29 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:30.280+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:30 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:30.281+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:30 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:30.478+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:30 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:30.479+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:30 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:31.381+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:31 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:31.382+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:31 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:31.483+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:31 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:31.484+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:31 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:32.585+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:32 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:32.585+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:32 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:32.586+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:32 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:32.587+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:32 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:33.588+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:33 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:33.589+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:33 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:33.788+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:33 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:33.789+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:33 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:34.591+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:34 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:34.591+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:34 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:34.791+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:34 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:34.792+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:34 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:35.493+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:35 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:35.494+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:35 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:35.994+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:35 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:35.995+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:35 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:36.696+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:36 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:36.697+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:36 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:37.197+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:37 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:37.198+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:37 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:37.900+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:37 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:37.900+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:37 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:38.401+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:38 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:38.401+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:38 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:38.803+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:38 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:38.803+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:38 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:38.936+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:38 INFO AdminMetadataManager: [AdminClient clientId=adminclient-2] Metadata update failed
+[2024-01-20T06:32:38.937+0000] {spark_submit.py:571} INFO - org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+[2024-01-20T06:32:38.937+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:38 INFO AdminMetadataManager: [AdminClient clientId=adminclient-1] Metadata update failed
+[2024-01-20T06:32:38.938+0000] {spark_submit.py:571} INFO - org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+[2024-01-20T06:32:39.538+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:39 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:39.539+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:39 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:39.739+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:39 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:39.740+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:39 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:40.441+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:40 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:40.444+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:40 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:40.942+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:40 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:40.945+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:40 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:41.544+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:41 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:41.545+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:41 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:42.046+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:42 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:42.047+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:42 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:42.648+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:42 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:42.648+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:42 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:42.948+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:42 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:42.949+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:42 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:43.851+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:43 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:43.852+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:43 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:43.852+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:43 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:43.852+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:43 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:45.055+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:45 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:45.055+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:45 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:45.056+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:45 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:45.056+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:45 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:45.958+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:45 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:45.958+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:45 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:45.959+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:45 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:45.959+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:45 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:46.961+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:46 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:46.961+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:46 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:47.161+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:47 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:47.161+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:47 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:47.963+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:47 INFO NetworkClient: [AdminClient clientId=adminclient-1] Node -1 disconnected.
+[2024-01-20T06:32:47.964+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:47 WARN NetworkClient: [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:48.064+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:48 INFO NetworkClient: [AdminClient clientId=adminclient-2] Node -1 disconnected.
+[2024-01-20T06:32:48.064+0000] {spark_submit.py:571} INFO - 24/01/20 06:32:48 WARN NetworkClient: [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+[2024-01-20T06:32:48.512+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2024-01-20T06:32:48.513+0000] {process_utils.py:131} INFO - Sending 15 to group 15878. PIDs of all processes in the group: [15879, 15938, 15878]
+[2024-01-20T06:32:48.513+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 15878
+[2024-01-20T06:32:48.514+0000] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-01-20T06:32:48.515+0000] {spark_submit.py:697} INFO - Sending kill signal to spark-submit
+[2024-01-20T06:32:48.523+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 490, in submit
+    self._process_spark_submit_log(iter(self._submit_sp.stdout))  # type: ignore
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 539, in _process_spark_submit_log
+    for line in itr:
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1634, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-01-20T06:32:48.534+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=SpeedLayer, task_id=submit_spark_job, execution_date=20240120T063125, start_date=20240120T063152, end_date=20240120T063248
+[2024-01-20T06:32:48.547+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 972 for task submit_spark_job ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(SpeedLayer, submit_spark_job, manual__2024-01-20T06:31:25.837474+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'submit_spark_job', 'dag_id': 'SpeedLayer', 'run_id': 'manual__2024-01-20T06:31:25.837474+00:00', 'map_index': -1, 'start_date': datetime.datetime(2024, 1, 20, 6, 31, 52, 960952, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2024, 1, 20, 6, 32, 48, 533520, tzinfo=Timezone('UTC')), 'duration': 55}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 15878)
+[2024-01-20T06:32:48.567+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=15879, status='terminated', started='06:31:52') (15879) terminated with exit code None
+[2024-01-20T06:32:48.568+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=15938, status='terminated', started='06:31:55') (15938) terminated with exit code None
+[2024-01-20T06:32:48.569+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=15878, status='terminated', exitcode=1, started='06:31:52') (15878) terminated with exit code 1

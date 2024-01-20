@@ -1,0 +1,223 @@
+[2024-01-17T03:39:07.834+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [queued]>
+[2024-01-17T03:39:07.840+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [queued]>
+[2024-01-17T03:39:07.840+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-01-17T03:39:07.852+0000] {taskinstance.py:1382} INFO - Executing <Task(SparkSubmitOperator): spark_submit_task> on 2024-01-17 03:25:00+00:00
+[2024-01-17T03:39:07.856+0000] {standard_task_runner.py:57} INFO - Started process 586 to run task
+[2024-01-17T03:39:07.859+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_stream_job', 'spark_submit_task', 'scheduled__2024-01-17T03:25:00+00:00', '--job-id', '183', '--raw', '--subdir', 'DAGS_FOLDER/spark_streaming_dag.py', '--cfg-path', '/tmp/tmptsyay84l']
+[2024-01-17T03:39:07.861+0000] {standard_task_runner.py:85} INFO - Job 183: Subtask spark_submit_task
+[2024-01-17T03:39:07.911+0000] {task_command.py:415} INFO - Running <TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [running]> on host 776833dc279e
+[2024-01-17T03:39:07.968+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='spark_stream_job' AIRFLOW_CTX_TASK_ID='spark_submit_task' AIRFLOW_CTX_EXECUTION_DATE='2024-01-17T03:25:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-17T03:25:00+00:00'
+[2024-01-17T03:39:07.975+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2024-01-17T03:39:07.975+0000] {spark_submit.py:401} INFO - Spark-Submit cmd: spark-submit --master spark://192.168.192.5:7077 --name spark_submit_job --verbose --queue root.default --deploy-mode client /opt/bitnami/scripts/spark_stream.py
+[2024-01-17T03:39:08.095+0000] {spark_submit.py:571} INFO - /home/***/.local/lib/python3.9/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2024-01-17T03:39:08.096+0000] {spark_submit.py:571} INFO - JAVA_HOME is not set
+[2024-01-17T03:39:08.109+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 502, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://192.168.192.5:7077 --name spark_submit_job --verbose --queue root.default --deploy-mode client /opt/bitnami/scripts/spark_stream.py. Error code is: 1.
+[2024-01-17T03:39:08.112+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=spark_stream_job, task_id=spark_submit_task, execution_date=20240117T032500, start_date=20240117T033907, end_date=20240117T033908
+[2024-01-17T03:39:08.125+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 183 for task spark_submit_task (Cannot execute: spark-submit --master spark://192.168.192.5:7077 --name spark_submit_job --verbose --queue root.default --deploy-mode client /opt/bitnami/scripts/spark_stream.py. Error code is: 1.; 586)
+[2024-01-17T03:39:08.153+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-01-17T03:39:08.174+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-01-17T04:40:46.989+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [queued]>
+[2024-01-17T04:40:46.994+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [queued]>
+[2024-01-17T04:40:46.994+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-17T04:40:47.003+0000] {taskinstance.py:1382} INFO - Executing <Task(SparkSubmitOperator): spark_submit_task> on 2024-01-17 03:25:00+00:00
+[2024-01-17T04:40:47.005+0000] {standard_task_runner.py:57} INFO - Started process 8537 to run task
+[2024-01-17T04:40:47.007+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_stream_job', 'spark_submit_task', 'scheduled__2024-01-17T03:25:00+00:00', '--job-id', '116', '--raw', '--subdir', 'DAGS_FOLDER/spark_streaming_dag.py', '--cfg-path', '/tmp/tmp7gvlycw6']
+[2024-01-17T04:40:47.008+0000] {standard_task_runner.py:85} INFO - Job 116: Subtask spark_submit_task
+[2024-01-17T04:40:47.045+0000] {task_command.py:415} INFO - Running <TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [running]> on host 614a419ad930
+[2024-01-17T04:40:47.097+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='spark_stream_job' AIRFLOW_CTX_TASK_ID='spark_submit_task' AIRFLOW_CTX_EXECUTION_DATE='2024-01-17T03:25:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-17T03:25:00+00:00'
+[2024-01-17T04:40:47.104+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2024-01-17T04:40:47.104+0000] {spark_submit.py:401} INFO - Spark-Submit cmd: spark-submit --master spark://192.168.224.5:7077 --name spark_submit_job --class org.apache.spark.deploy.PythonRunner --verbose --queue root.default --deploy-mode client /opt/bitnami/code/spark_stream.py
+[2024-01-17T04:40:47.201+0000] {spark_submit.py:571} INFO - /home/***/.local/lib/python3.9/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2024-01-17T04:40:48.281+0000] {spark_submit.py:571} INFO - Using properties file: null
+[2024-01-17T04:40:48.363+0000] {spark_submit.py:571} INFO - Parsed arguments:
+[2024-01-17T04:40:48.364+0000] {spark_submit.py:571} INFO - master                  spark://192.168.224.5:7077
+[2024-01-17T04:40:48.364+0000] {spark_submit.py:571} INFO - remote                  null
+[2024-01-17T04:40:48.364+0000] {spark_submit.py:571} INFO - deployMode              client
+[2024-01-17T04:40:48.364+0000] {spark_submit.py:571} INFO - executorMemory          null
+[2024-01-17T04:40:48.364+0000] {spark_submit.py:571} INFO - executorCores           null
+[2024-01-17T04:40:48.364+0000] {spark_submit.py:571} INFO - totalExecutorCores      null
+[2024-01-17T04:40:48.364+0000] {spark_submit.py:571} INFO - propertiesFile          null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - driverMemory            null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - driverCores             null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - driverExtraClassPath    null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - driverExtraLibraryPath  null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - driverExtraJavaOptions  null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - supervise               false
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - queue                   root.default
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - numExecutors            null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - files                   null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - pyFiles                 null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - archives                null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - mainClass               org.apache.spark.deploy.PythonRunner
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - primaryResource         file:/opt/bitnami/code/spark_stream.py
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - name                    spark_submit_job
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - childArgs               []
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - jars                    null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - packages                null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - packagesExclusions      null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - repositories            null
+[2024-01-17T04:40:48.365+0000] {spark_submit.py:571} INFO - verbose                 true
+[2024-01-17T04:40:48.366+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:40:48.366+0000] {spark_submit.py:571} INFO - Spark properties used, including those specified through
+[2024-01-17T04:40:48.366+0000] {spark_submit.py:571} INFO - --conf and those from the properties file null:
+[2024-01-17T04:40:48.366+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:40:48.366+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:40:48.366+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:40:48.595+0000] {spark_submit.py:571} INFO - Main class:
+[2024-01-17T04:40:48.595+0000] {spark_submit.py:571} INFO - org.apache.spark.deploy.PythonRunner
+[2024-01-17T04:40:48.595+0000] {spark_submit.py:571} INFO - Arguments:
+[2024-01-17T04:40:48.595+0000] {spark_submit.py:571} INFO - file:/opt/bitnami/code/spark_stream.py
+[2024-01-17T04:40:48.595+0000] {spark_submit.py:571} INFO - null
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - Spark config:
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - (spark.app.name,spark_submit_job)
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - (spark.app.submitTime,1705466448580)
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - (spark.master,spark://192.168.224.5:7077)
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - (spark.submit.deployMode,client)
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - (spark.submit.pyFiles,)
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - Classpath elements:
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:40:48.598+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:40:48.599+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:40:48.776+0000] {spark_submit.py:571} INFO - python3: can't open file '/opt/bitnami/code/spark_stream.py': [Errno 2] No such file or directory
+[2024-01-17T04:40:48.790+0000] {spark_submit.py:571} INFO - 24/01/17 04:40:48 INFO ShutdownHookManager: Shutdown hook called
+[2024-01-17T04:40:48.793+0000] {spark_submit.py:571} INFO - 24/01/17 04:40:48 INFO ShutdownHookManager: Deleting directory /tmp/spark-bbf02ab9-8acf-42bf-ac88-ec84e3fd880a
+[2024-01-17T04:40:48.827+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 502, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://192.168.224.5:7077 --name spark_submit_job --class org.apache.spark.deploy.PythonRunner --verbose --queue root.default --deploy-mode client /opt/bitnami/code/spark_stream.py. Error code is: 2.
+[2024-01-17T04:40:48.829+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=spark_stream_job, task_id=spark_submit_task, execution_date=20240117T032500, start_date=20240117T044046, end_date=20240117T044048
+[2024-01-17T04:40:48.839+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 116 for task spark_submit_task (Cannot execute: spark-submit --master spark://192.168.224.5:7077 --name spark_submit_job --class org.apache.spark.deploy.PythonRunner --verbose --queue root.default --deploy-mode client /opt/bitnami/code/spark_stream.py. Error code is: 2.; 8537)
+[2024-01-17T04:40:48.867+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-01-17T04:40:48.885+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-01-17T04:49:40.320+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [queued]>
+[2024-01-17T04:49:40.325+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [queued]>
+[2024-01-17T04:49:40.325+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-17T04:49:40.335+0000] {taskinstance.py:1382} INFO - Executing <Task(SparkSubmitOperator): spark_submit_task> on 2024-01-17 03:25:00+00:00
+[2024-01-17T04:49:40.338+0000] {standard_task_runner.py:57} INFO - Started process 18794 to run task
+[2024-01-17T04:49:40.340+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spark_stream_job', 'spark_submit_task', 'scheduled__2024-01-17T03:25:00+00:00', '--job-id', '175', '--raw', '--subdir', 'DAGS_FOLDER/spark_streaming_dag.py', '--cfg-path', '/tmp/tmpyj_wu_q6']
+[2024-01-17T04:49:40.341+0000] {standard_task_runner.py:85} INFO - Job 175: Subtask spark_submit_task
+[2024-01-17T04:49:40.380+0000] {task_command.py:415} INFO - Running <TaskInstance: spark_stream_job.spark_submit_task scheduled__2024-01-17T03:25:00+00:00 [running]> on host 614a419ad930
+[2024-01-17T04:49:40.461+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='spark_stream_job' AIRFLOW_CTX_TASK_ID='spark_submit_task' AIRFLOW_CTX_EXECUTION_DATE='2024-01-17T03:25:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-17T03:25:00+00:00'
+[2024-01-17T04:49:40.471+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2024-01-17T04:49:40.472+0000] {spark_submit.py:401} INFO - Spark-Submit cmd: spark-submit --master spark://192.168.224.5:7077 --name spark_submit_job --class org.apache.spark.deploy.PythonRunner --verbose --queue root.default --deploy-mode client /opt/***/dags/spark_stream.py
+[2024-01-17T04:49:40.603+0000] {spark_submit.py:571} INFO - /home/***/.local/lib/python3.9/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2024-01-17T04:49:41.840+0000] {spark_submit.py:571} INFO - Using properties file: null
+[2024-01-17T04:49:41.922+0000] {spark_submit.py:571} INFO - Parsed arguments:
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - master                  spark://192.168.224.5:7077
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - remote                  null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - deployMode              client
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - executorMemory          null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - executorCores           null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - totalExecutorCores      null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - propertiesFile          null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - driverMemory            null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - driverCores             null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - driverExtraClassPath    null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - driverExtraLibraryPath  null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - driverExtraJavaOptions  null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - supervise               false
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - queue                   root.default
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - numExecutors            null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - files                   null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - pyFiles                 null
+[2024-01-17T04:49:41.923+0000] {spark_submit.py:571} INFO - archives                null
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - mainClass               org.apache.spark.deploy.PythonRunner
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - primaryResource         file:/opt/***/dags/spark_stream.py
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - name                    spark_submit_job
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - childArgs               []
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - jars                    null
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - packages                null
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - packagesExclusions      null
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - repositories            null
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - verbose                 true
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - Spark properties used, including those specified through
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - --conf and those from the properties file null:
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:49:41.924+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:49:42.094+0000] {spark_submit.py:571} INFO - Main class:
+[2024-01-17T04:49:42.094+0000] {spark_submit.py:571} INFO - org.apache.spark.deploy.PythonRunner
+[2024-01-17T04:49:42.095+0000] {spark_submit.py:571} INFO - Arguments:
+[2024-01-17T04:49:42.095+0000] {spark_submit.py:571} INFO - file:/opt/***/dags/spark_stream.py
+[2024-01-17T04:49:42.095+0000] {spark_submit.py:571} INFO - null
+[2024-01-17T04:49:42.097+0000] {spark_submit.py:571} INFO - Spark config:
+[2024-01-17T04:49:42.097+0000] {spark_submit.py:571} INFO - (spark.app.name,spark_submit_job)
+[2024-01-17T04:49:42.097+0000] {spark_submit.py:571} INFO - (spark.app.submitTime,1705466982084)
+[2024-01-17T04:49:42.097+0000] {spark_submit.py:571} INFO - (spark.master,spark://192.168.224.5:7077)
+[2024-01-17T04:49:42.097+0000] {spark_submit.py:571} INFO - (spark.submit.deployMode,client)
+[2024-01-17T04:49:42.097+0000] {spark_submit.py:571} INFO - (spark.submit.pyFiles,)
+[2024-01-17T04:49:42.097+0000] {spark_submit.py:571} INFO - Classpath elements:
+[2024-01-17T04:49:42.098+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:49:42.098+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:49:42.098+0000] {spark_submit.py:571} INFO - 
+[2024-01-17T04:49:43.491+0000] {spark_submit.py:571} INFO - None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+[2024-01-17T04:49:43.648+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SparkContext: Running Spark version 3.5.0
+[2024-01-17T04:49:43.650+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SparkContext: OS info Linux, 5.10.16.3-microsoft-standard-WSL2, amd64
+[2024-01-17T04:49:43.650+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SparkContext: Java version 11.0.21
+[2024-01-17T04:49:43.698+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-01-17T04:49:43.754+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO ResourceUtils: ==============================================================
+[2024-01-17T04:49:43.755+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-01-17T04:49:43.755+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO ResourceUtils: ==============================================================
+[2024-01-17T04:49:43.755+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SparkContext: Submitted application: SparkDataStreaming
+[2024-01-17T04:49:43.770+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-01-17T04:49:43.780+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO ResourceProfile: Limiting resource is cpu
+[2024-01-17T04:49:43.780+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-01-17T04:49:43.823+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SecurityManager: Changing view acls to: ***
+[2024-01-17T04:49:43.824+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SecurityManager: Changing modify acls to: ***
+[2024-01-17T04:49:43.824+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SecurityManager: Changing view acls groups to:
+[2024-01-17T04:49:43.825+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SecurityManager: Changing modify acls groups to:
+[2024-01-17T04:49:43.825+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2024-01-17T04:49:43.980+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO Utils: Successfully started service 'sparkDriver' on port 42761.
+[2024-01-17T04:49:44.000+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:43 INFO SparkEnv: Registering MapOutputTracker
+[2024-01-17T04:49:44.024+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO SparkEnv: Registering BlockManagerMaster
+[2024-01-17T04:49:44.037+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-01-17T04:49:44.037+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-01-17T04:49:44.040+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-01-17T04:49:44.055+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-93030c71-9a13-4c9d-ac28-83b9efc002a3
+[2024-01-17T04:49:44.066+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2024-01-17T04:49:44.077+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-01-17T04:49:44.178+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-01-17T04:49:44.222+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-01-17T04:49:44.307+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://192.168.224.5:7077...
+[2024-01-17T04:49:44.339+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO TransportClientFactory: Successfully created connection to /192.168.224.5:7077 after 19 ms (0 ms spent in bootstraps)
+[2024-01-17T04:49:44.392+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20240117044944-0049
+[2024-01-17T04:49:44.393+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20240117044944-0049/0 on worker-20240117040815-192.168.224.7-45465 (192.168.224.7:45465) with 2 core(s)
+[2024-01-17T04:49:44.394+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO StandaloneSchedulerBackend: Granted executor ID app-20240117044944-0049/0 on hostPort 192.168.224.7:45465 with 2 core(s), 1024.0 MiB RAM
+[2024-01-17T04:49:44.399+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38293.
+[2024-01-17T04:49:44.399+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO NettyBlockTransferService: Server created on 614a419ad930:38293
+[2024-01-17T04:49:44.400+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-01-17T04:49:44.405+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 614a419ad930, 38293, None)
+[2024-01-17T04:49:44.409+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO BlockManagerMasterEndpoint: Registering block manager 614a419ad930:38293 with 434.4 MiB RAM, BlockManagerId(driver, 614a419ad930, 38293, None)
+[2024-01-17T04:49:44.411+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 614a419ad930, 38293, None)
+[2024-01-17T04:49:44.412+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 614a419ad930, 38293, None)
+[2024-01-17T04:49:44.415+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20240117044944-0049/0 is now RUNNING
+[2024-01-17T04:49:44.574+0000] {spark_submit.py:571} INFO - 24/01/17 04:49:44 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2024-01-17T04:49:45.665+0000] {spark_submit.py:571} INFO - WARNING:root:kafka dataframe could not be created because: Failed to find data source: kafka. Please deploy the application as per the deployment section of Structured Streaming + Kafka Integration Guide.
+[2024-01-17T04:49:45.668+0000] {spark_submit.py:571} INFO - ERROR:root:An error occurred in the Spark Streaming job: Failed to find data source: kafka. Please deploy the application as per the deployment section of Structured Streaming + Kafka Integration Guide.
+[2024-01-17T04:49:46.095+0000] {spark_submit.py:571} INFO - Traceback (most recent call last):
+[2024-01-17T04:49:46.095+0000] {spark_submit.py:571} INFO - File "/opt/***/dags/spark_stream.py", line 331, in <module>
+[2024-01-17T04:49:46.095+0000] {spark_submit.py:571} INFO - main()
+[2024-01-17T04:49:46.095+0000] {spark_submit.py:571} INFO - File "/opt/***/dags/spark_stream.py", line 328, in main
+[2024-01-17T04:49:46.095+0000] {spark_submit.py:571} INFO - cassandra_session.shutdown()
+[2024-01-17T04:49:46.095+0000] {spark_submit.py:571} INFO - UnboundLocalError: local variable 'cassandra_session' referenced before assignment
+[2024-01-17T04:49:46.260+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 502, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://192.168.224.5:7077 --name spark_submit_job --class org.apache.spark.deploy.PythonRunner --verbose --queue root.default --deploy-mode client /opt/***/dags/spark_stream.py. Error code is: 1.
+[2024-01-17T04:49:46.263+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=spark_stream_job, task_id=spark_submit_task, execution_date=20240117T032500, start_date=20240117T044940, end_date=20240117T044946
+[2024-01-17T04:49:46.274+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 175 for task spark_submit_task (Cannot execute: spark-submit --master spark://192.168.224.5:7077 --name spark_submit_job --class org.apache.spark.deploy.PythonRunner --verbose --queue root.default --deploy-mode client /opt/***/dags/spark_stream.py. Error code is: 1.; 18794)
+[2024-01-17T04:49:46.297+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-01-17T04:49:46.316+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

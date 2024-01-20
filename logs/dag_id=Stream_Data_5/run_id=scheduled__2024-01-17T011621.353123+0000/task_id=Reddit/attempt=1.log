@@ -1,0 +1,153 @@
+[2024-01-17T01:41:24.017+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Stream_Data_5.Reddit scheduled__2024-01-17T01:16:21.353123+00:00 [queued]>
+[2024-01-17T01:41:24.023+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Stream_Data_5.Reddit scheduled__2024-01-17T01:16:21.353123+00:00 [queued]>
+[2024-01-17T01:41:24.024+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-17T01:41:24.035+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): Reddit> on 2024-01-17 01:16:21.353123+00:00
+[2024-01-17T01:41:24.040+0000] {standard_task_runner.py:57} INFO - Started process 295 to run task
+[2024-01-17T01:41:24.049+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Stream_Data_5', 'Reddit', 'scheduled__2024-01-17T01:16:21.353123+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream_5.py', '--cfg-path', '/tmp/tmpjodezdsl']
+[2024-01-17T01:41:24.050+0000] {standard_task_runner.py:85} INFO - Job 48: Subtask Reddit
+[2024-01-17T01:41:24.251+0000] {task_command.py:415} INFO - Running <TaskInstance: Stream_Data_5.Reddit scheduled__2024-01-17T01:16:21.353123+00:00 [running]> on host 4ec820d606d8
+[2024-01-17T01:41:24.317+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='Stream_Data_5' AIRFLOW_CTX_TASK_ID='Reddit' AIRFLOW_CTX_EXECUTION_DATE='2024-01-17T01:16:21.353123+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-17T01:16:21.353123+00:00'
+[2024-01-17T01:41:24.358+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-17T01:41:25.408+0000] {logging_mixin.py:151} INFO - @True
+[2024-01-17T01:41:25.410+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('192.168.80.8', 29092)]>: connecting to broker:29092 [('192.168.80.8', 29092) IPv4]
+[2024-01-17T01:41:25.410+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-01-17T01:41:25.411+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('192.168.80.8', 29092)]>: Connection complete.
+[2024-01-17T01:41:25.514+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-01-17T01:41:25.514+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-01-17T01:41:25.517+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.518+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.519+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.520+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.520+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.520+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.520+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.520+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.520+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:25.520+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-17T01:41:25.521+0000] {conn.py:380} INFO - <BrokerConnection node_id=1 host=broker:29092 <connecting> [IPv4 ('192.168.80.8', 29092)]>: connecting to broker:29092 [('192.168.80.8', 29092) IPv4]
+[2024-01-17T01:41:25.522+0000] {conn.py:410} INFO - <BrokerConnection node_id=1 host=broker:29092 <connecting> [IPv4 ('192.168.80.8', 29092)]>: Connection complete.
+[2024-01-17T01:41:25.522+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connected> [IPv4 ('192.168.80.8', 29092)]>: Closing connection. 
+[2024-01-17T01:41:26.240+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.241+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.242+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.243+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-17T01:41:26.879+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.879+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.879+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.880+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.880+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.880+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.880+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.880+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.881+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.882+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.883+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.883+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.883+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.884+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.885+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.885+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.885+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-17T01:41:26.885+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-17T01:41:26.925+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2024-01-17T01:41:26.926+0000] {process_utils.py:131} INFO - Sending 15 to group 295. PIDs of all processes in the group: [295]
+[2024-01-17T01:41:26.926+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 295
+[2024-01-17T01:41:26.926+0000] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-01-17T01:41:26.927+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kafka_stream_5.py", line 95, in reddit_function
+    for submission in subreddit.new(limit=30):
+  File "/home/airflow/.local/lib/python3.9/site-packages/praw/models/listing/generator.py", line 63, in __next__
+    self._next_batch()
+  File "/home/airflow/.local/lib/python3.9/site-packages/praw/models/listing/generator.py", line 89, in _next_batch
+    self._listing = self._reddit.get(self.url, params=self.params)
+  File "/home/airflow/.local/lib/python3.9/site-packages/praw/util/deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/praw/reddit.py", line 712, in get
+    return self._objectify_request(method="GET", params=params, path=path)
+  File "/home/airflow/.local/lib/python3.9/site-packages/praw/reddit.py", line 517, in _objectify_request
+    self.request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/praw/util/deprecate_args.py", line 43, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/praw/reddit.py", line 941, in request
+    return self._core.request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/prawcore/sessions.py", line 328, in request
+    return self._request_with_retries(
+  File "/home/airflow/.local/lib/python3.9/site-packages/prawcore/sessions.py", line 234, in _request_with_retries
+    response, saved_exception = self._make_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/prawcore/sessions.py", line 186, in _make_request
+    response = self._rate_limiter.call(
+  File "/home/airflow/.local/lib/python3.9/site-packages/prawcore/rate_limit.py", line 47, in call
+    response = request_function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/prawcore/requestor.py", line 70, in request
+    raise RequestException(exc, args, kwargs) from None
+prawcore.exceptions.RequestException: error with request Task received SIGTERM signal
+[2024-01-17T01:41:26.944+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=Stream_Data_5, task_id=Reddit, execution_date=20240117T011621, start_date=20240117T014124, end_date=20240117T014126
+[2024-01-17T01:41:26.954+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 48 for task Reddit (error with request Task received SIGTERM signal; 295)
+[2024-01-17T01:41:26.978+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=295, status='terminated', exitcode=1, started='01:41:23') (295) terminated with exit code 1
+[2024-01-17T01:41:26.979+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 143
+[2024-01-17T01:41:27.001+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

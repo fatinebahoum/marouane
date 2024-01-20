@@ -1,0 +1,270 @@
+[2024-01-20T05:35:02.821+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Kafka_Producer_4.Reddit scheduled__2024-01-20T05:32:49.821925+00:00 [queued]>
+[2024-01-20T05:35:02.827+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Kafka_Producer_4.Reddit scheduled__2024-01-20T05:32:49.821925+00:00 [queued]>
+[2024-01-20T05:35:02.827+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-20T05:35:02.838+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): Reddit> on 2024-01-20 05:32:49.821925+00:00
+[2024-01-20T05:35:02.842+0000] {standard_task_runner.py:57} INFO - Started process 12020 to run task
+[2024-01-20T05:35:02.844+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Kafka_Producer_4', 'Reddit', 'scheduled__2024-01-20T05:32:49.821925+00:00', '--job-id', '619', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream_4.py', '--cfg-path', '/tmp/tmpnxlb9vf2']
+[2024-01-20T05:35:02.845+0000] {standard_task_runner.py:85} INFO - Job 619: Subtask Reddit
+[2024-01-20T05:35:02.881+0000] {task_command.py:415} INFO - Running <TaskInstance: Kafka_Producer_4.Reddit scheduled__2024-01-20T05:32:49.821925+00:00 [running]> on host 45c5bfab8aa1
+[2024-01-20T05:35:02.946+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='Kafka_Producer_4' AIRFLOW_CTX_TASK_ID='Reddit' AIRFLOW_CTX_EXECUTION_DATE='2024-01-20T05:32:49.821925+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-20T05:32:49.821925+00:00'
+[2024-01-20T05:35:02.974+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-20T05:35:03.777+0000] {logging_mixin.py:151} INFO - @True
+[2024-01-20T05:35:03.779+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: connecting to broker:29092 [('172.19.0.8', 29092) IPv4]
+[2024-01-20T05:35:03.779+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-01-20T05:35:03.780+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: Connection complete.
+[2024-01-20T05:35:03.882+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-01-20T05:35:03.883+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-01-20T05:35:03.886+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.887+0000] {conn.py:380} INFO - <BrokerConnection node_id=1 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: connecting to broker:29092 [('172.19.0.8', 29092) IPv4]
+[2024-01-20T05:35:03.887+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.888+0000] {conn.py:410} INFO - <BrokerConnection node_id=1 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: Connection complete.
+[2024-01-20T05:35:03.889+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connected> [IPv4 ('172.19.0.8', 29092)]>: Closing connection. 
+[2024-01-20T05:35:03.888+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.890+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.891+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.891+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.892+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.892+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.892+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.893+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.893+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.893+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.893+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.893+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.894+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.894+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.894+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.894+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.894+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.895+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.895+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.895+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.895+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.896+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.896+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.896+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.897+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.897+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.897+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:03.897+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-20T05:35:04.753+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.754+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.754+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.755+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.755+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.756+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.757+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.757+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.758+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.758+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.758+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.759+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.759+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.760+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.761+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.761+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.762+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.762+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.762+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.763+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.763+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.763+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.763+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.764+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.764+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.764+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.764+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.765+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.765+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.765+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:04.765+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-20T05:35:05.378+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.379+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.379+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.380+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.380+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.380+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.380+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.381+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.381+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.381+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.381+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.381+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.382+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.382+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.383+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.383+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.383+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.384+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.384+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.384+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.384+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.385+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.385+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.385+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.385+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.386+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.386+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.386+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.386+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.387+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.387+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-20T05:35:05.801+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.802+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.802+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.802+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.803+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.803+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.803+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.804+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.804+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.804+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.804+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.806+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.806+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.806+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.806+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.807+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.807+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.807+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.809+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.809+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:05.809+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-20T05:35:06.253+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.253+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.253+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.254+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.254+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.254+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.254+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.255+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.255+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.255+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.255+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.256+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.256+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.256+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.256+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.257+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.257+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.257+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.257+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.258+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.258+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.258+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.258+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.258+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.259+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.259+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.259+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.259+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.260+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.260+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.260+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-20T05:35:06.649+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.649+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.649+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.650+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.650+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.650+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.650+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.651+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.651+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.651+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.651+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.652+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.652+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.652+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.652+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.653+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.653+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.653+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.654+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.654+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.654+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.654+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.654+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.655+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.655+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.655+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.655+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.656+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.656+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.656+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:06.656+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-20T05:35:07.225+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.225+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.226+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.226+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.226+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.228+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.228+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.229+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.229+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.229+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.229+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.230+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.230+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.230+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.230+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.230+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.231+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.231+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.231+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.232+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.232+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.232+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.232+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.233+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.233+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.233+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.233+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.234+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.234+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.234+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.234+0000] {logging_mixin.py:151} INFO -  submission : 
+[2024-01-20T05:35:07.802+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.803+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.803+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.804+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.804+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.804+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.805+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.806+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.806+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.806+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.806+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.807+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.807+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.807+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.807+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.808+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.809+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.809+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.809+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.809+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.810+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.810+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.810+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.810+0000] {logging_mixin.py:151} INFO - #False
+[2024-01-20T05:35:07.811+0000] {conn.py:919} INFO - <BrokerConnection node_id=1 host=broker:29092 <connected> [IPv4 ('172.19.0.8', 29092)]>: Closing connection. 
+[2024-01-20T05:35:07.811+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-01-20T05:35:07.819+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=Kafka_Producer_4, task_id=Reddit, execution_date=20240120T053249, start_date=20240120T053502, end_date=20240120T053507
+[2024-01-20T05:35:07.870+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-01-20T05:35:07.883+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

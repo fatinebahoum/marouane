@@ -1,0 +1,23 @@
+[2024-01-20T06:13:18.854+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Kafka_Producer_4.coinMarket scheduled__2024-01-20T06:11:17.127272+00:00 [queued]>
+[2024-01-20T06:13:18.859+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Kafka_Producer_4.coinMarket scheduled__2024-01-20T06:11:17.127272+00:00 [queued]>
+[2024-01-20T06:13:18.860+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-20T06:13:18.871+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): coinMarket> on 2024-01-20 06:11:17.127272+00:00
+[2024-01-20T06:13:18.874+0000] {standard_task_runner.py:57} INFO - Started process 14737 to run task
+[2024-01-20T06:13:18.876+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Kafka_Producer_4', 'coinMarket', 'scheduled__2024-01-20T06:11:17.127272+00:00', '--job-id', '862', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream_4.py', '--cfg-path', '/tmp/tmpxjgzx4fb']
+[2024-01-20T06:13:18.877+0000] {standard_task_runner.py:85} INFO - Job 862: Subtask coinMarket
+[2024-01-20T06:13:18.918+0000] {task_command.py:415} INFO - Running <TaskInstance: Kafka_Producer_4.coinMarket scheduled__2024-01-20T06:11:17.127272+00:00 [running]> on host 45c5bfab8aa1
+[2024-01-20T06:13:18.987+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='Kafka_Producer_4' AIRFLOW_CTX_TASK_ID='coinMarket' AIRFLOW_CTX_EXECUTION_DATE='2024-01-20T06:11:17.127272+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-20T06:11:17.127272+00:00'
+[2024-01-20T06:13:19.585+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: connecting to broker:29092 [('172.19.0.8', 29092) IPv4]
+[2024-01-20T06:13:19.586+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-01-20T06:13:19.586+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: Connection complete.
+[2024-01-20T06:13:19.689+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2024-01-20T06:13:19.689+0000] {conn.py:1268} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2024-01-20T06:13:19.753+0000] {logging_mixin.py:151} INFO - Bitcoin data send to bitcoin_data topic at 2024-01-20 06:13:19.753769
+[2024-01-20T06:13:19.755+0000] {conn.py:380} INFO - <BrokerConnection node_id=1 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: connecting to broker:29092 [('172.19.0.8', 29092) IPv4]
+[2024-01-20T06:13:19.755+0000] {conn.py:410} INFO - <BrokerConnection node_id=1 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: Connection complete.
+[2024-01-20T06:13:19.756+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connected> [IPv4 ('172.19.0.8', 29092)]>: Closing connection. 
+[2024-01-20T06:13:19.757+0000] {conn.py:919} INFO - <BrokerConnection node_id=1 host=broker:29092 <connected> [IPv4 ('172.19.0.8', 29092)]>: Closing connection. 
+[2024-01-20T06:13:19.758+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-01-20T06:13:19.766+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=Kafka_Producer_4, task_id=coinMarket, execution_date=20240120T061117, start_date=20240120T061318, end_date=20240120T061319
+[2024-01-20T06:13:19.813+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-01-20T06:13:19.838+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
