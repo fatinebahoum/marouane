@@ -10,6 +10,8 @@ from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import requests
 import logging
 import subprocess
+from uuid import uuid4
+
 
 default_args = {
     'owner': 'me',
@@ -30,7 +32,7 @@ def coinMarket_function():
     }
     headers = {
         'Accepts': 'application/json',
-        'X-CMC_PRO_API_KEY': '1f5a2103-63e6-4bb8-8ee1-5e3e874c8bc7',
+        'X-CMC_PRO_API_KEY': 'a248bb66-1db0-478a-8fea-5bc4e6eff197',
     }
 
     session = Session()
@@ -44,16 +46,17 @@ def coinMarket_function():
 
         if bitcoin_data:
             data = {
-                'Name': bitcoin_data['name'],
-                'Symbol': bitcoin_data['symbol'],
+                'id': str(uuid4()),
+                'name': bitcoin_data['name'],
+                'symbol': bitcoin_data['symbol'],
                 'num_market_pairs': bitcoin_data['num_market_pairs'],
                 'max_supply': bitcoin_data['max_supply'],
                 'infinite_supply': bitcoin_data['infinite_supply'],
                 'last_updated': bitcoin_data['last_updated'],
-                'Price (USD)': bitcoin_data['quote']['USD']['price'],
-                'Market Cap (USD)': bitcoin_data['quote']['USD']['market_cap'],
-                'Volume 24h (USD)': bitcoin_data['quote']['USD']['volume_24h'],
-                'Percent Change 24h': bitcoin_data['quote']['USD']['percent_change_24h'],
+                'price_usd': bitcoin_data['quote']['USD']['price'],
+                'market_cap_usd': bitcoin_data['quote']['USD']['market_cap'],
+                'volume_24h_usd': bitcoin_data['quote']['USD']['volume_24h'],
+                'percent_change_24h': bitcoin_data['quote']['USD']['percent_change_24h'],
                 'percent_change_1h': bitcoin_data['quote']['USD']['percent_change_1h'],
             }
 
@@ -80,7 +83,7 @@ def reddit_function():
     )
     subreddits = ['Bitcoin', 'btc', 'CryptoCurrency', 'BitcoinIndia', 'BitcoinMining','BitcoinCA','CryptoMarkets','CryptoCurrencies']
     # Calculate the timestamp for 5 minutes ago
-    one_minute_ago = datetime.utcnow() - timedelta(minutes=5)
+    one_minute_ago = datetime.utcnow() - timedelta(minutes=120)
     one_minute_ago_timestamp = int(one_minute_ago.timestamp())
     for subreddit_name in subreddits:
         print(" submission : ")
@@ -92,7 +95,7 @@ def reddit_function():
         'upvote_ratio', 'category', 'score', 'created', 'num_comments', 'url', 'view_count', 'send_replies'
         ]
 
-        for submission in subreddit.new(limit=30):
+        for submission in subreddit.new(limit=50):
             post_info = {}  
             '''
             if submission.created_utc >= one_minute_ago_timestamp:
@@ -107,7 +110,7 @@ def reddit_function():
                     else:
                         post_info[key] = submission.__dict__[key]
                 post_info['created_utc'] = datetime.utcfromtimestamp(post_info['created_utc']).strftime('%Y-%m-%d %H:%M:%S')
-    
+                post_info['id'] = str(uuid.uuid4())
                 producer = KafkaProducer(bootstrap_servers=['broker:29092'], max_block_ms=5000)
                 producer.send('reddit_data', json.dumps(post_info).encode('utf-8'))
             

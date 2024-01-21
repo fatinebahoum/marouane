@@ -1,0 +1,30 @@
+[2024-01-20T23:30:52.672+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Kafka_Producer_2.coinMarket scheduled__2024-01-20T23:28:50.150622+00:00 [queued]>
+[2024-01-20T23:30:52.677+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Kafka_Producer_2.coinMarket scheduled__2024-01-20T23:28:50.150622+00:00 [queued]>
+[2024-01-20T23:30:52.678+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-20T23:30:52.689+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): coinMarket> on 2024-01-20 23:28:50.150622+00:00
+[2024-01-20T23:30:52.693+0000] {standard_task_runner.py:57} INFO - Started process 1781 to run task
+[2024-01-20T23:30:52.696+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Kafka_Producer_2', 'coinMarket', 'scheduled__2024-01-20T23:28:50.150622+00:00', '--job-id', '1477', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream_2.py', '--cfg-path', '/tmp/tmp3mcze93l']
+[2024-01-20T23:30:52.697+0000] {standard_task_runner.py:85} INFO - Job 1477: Subtask coinMarket
+[2024-01-20T23:30:52.742+0000] {task_command.py:415} INFO - Running <TaskInstance: Kafka_Producer_2.coinMarket scheduled__2024-01-20T23:28:50.150622+00:00 [running]> on host 45c5bfab8aa1
+[2024-01-20T23:30:52.810+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='Kafka_Producer_2' AIRFLOW_CTX_TASK_ID='coinMarket' AIRFLOW_CTX_EXECUTION_DATE='2024-01-20T23:28:50.150622+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-20T23:28:50.150622+00:00'
+[2024-01-20T23:30:58.334+0000] {conn.py:380} INFO - <BrokerConnection node_id=bootstrap-0 host=broker:29092 <connecting> [IPv4 ('172.19.0.8', 29092)]>: connecting to broker:29092 [('172.19.0.8', 29092) IPv4]
+[2024-01-20T23:30:58.335+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2024-01-20T23:30:58.336+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kafka_stream_2.py", line 63, in coinMarket_function
+    producer = KafkaProducer(bootstrap_servers=['broker:29092'],max_block_ms = 5000)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/producer/kafka.py", line 381, in __init__
+    client = KafkaClient(metrics=self._metrics, metric_group_prefix='producer',
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 244, in __init__
+    self.config['api_version'] = self.check_version(timeout=check_timeout)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 927, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2024-01-20T23:30:58.461+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=Kafka_Producer_2, task_id=coinMarket, execution_date=20240120T232850, start_date=20240120T233052, end_date=20240120T233058
+[2024-01-20T23:30:58.475+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1477 for task coinMarket (NoBrokersAvailable; 1781)
+[2024-01-20T23:30:58.521+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-01-20T23:30:58.537+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

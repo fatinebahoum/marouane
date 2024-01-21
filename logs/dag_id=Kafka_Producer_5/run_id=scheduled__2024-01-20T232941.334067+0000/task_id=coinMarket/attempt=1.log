@@ -1,0 +1,22 @@
+[2024-01-20T23:30:43.456+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Kafka_Producer_5.coinMarket scheduled__2024-01-20T23:29:41.334067+00:00 [queued]>
+[2024-01-20T23:30:43.492+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Kafka_Producer_5.coinMarket scheduled__2024-01-20T23:29:41.334067+00:00 [queued]>
+[2024-01-20T23:30:43.493+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-20T23:30:43.509+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): coinMarket> on 2024-01-20 23:29:41.334067+00:00
+[2024-01-20T23:30:43.514+0000] {standard_task_runner.py:57} INFO - Started process 1771 to run task
+[2024-01-20T23:30:43.517+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Kafka_Producer_5', 'coinMarket', 'scheduled__2024-01-20T23:29:41.334067+00:00', '--job-id', '1475', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream_5.py', '--cfg-path', '/tmp/tmpklz8nmq0']
+[2024-01-20T23:30:43.519+0000] {standard_task_runner.py:85} INFO - Job 1475: Subtask coinMarket
+[2024-01-20T23:30:43.574+0000] {task_command.py:415} INFO - Running <TaskInstance: Kafka_Producer_5.coinMarket scheduled__2024-01-20T23:29:41.334067+00:00 [running]> on host 45c5bfab8aa1
+[2024-01-20T23:30:43.658+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='Kafka_Producer_5' AIRFLOW_CTX_TASK_ID='coinMarket' AIRFLOW_CTX_EXECUTION_DATE='2024-01-20T23:29:41.334067+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-20T23:29:41.334067+00:00'
+[2024-01-20T23:30:44.330+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kafka_stream_5.py", line 45, in coinMarket_function
+    bitcoin_data = next((crypto for crypto in data['data'] if crypto['symbol'] == 'BTC'), None)
+KeyError: 'data'
+[2024-01-20T23:30:44.342+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=Kafka_Producer_5, task_id=coinMarket, execution_date=20240120T232941, start_date=20240120T233043, end_date=20240120T233044
+[2024-01-20T23:30:44.353+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1475 for task coinMarket ('data'; 1771)
+[2024-01-20T23:30:44.374+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-01-20T23:30:44.395+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

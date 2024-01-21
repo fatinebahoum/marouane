@@ -1,0 +1,2 @@
+[2024-01-20T21:23:28.729+0000] {taskinstance.py:1149} INFO - Dependencies not met for <TaskInstance: Kafka_Producer_3.coinMarket manual__2024-01-20T21:20:19.255396+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2024-01-20T21:23:28.781+0000] {local_task_job_runner.py:154} INFO - Task is not able to be run

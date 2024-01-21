@@ -1,0 +1,378 @@
+[2024-01-21T00:00:25.130+0000] {processor.py:157} INFO - Started process (PID=2909) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:00:25.130+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:00:25.131+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:00:25.131+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:00:25.189+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:00:25.210+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:00:25.210+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:00:25.227+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:00:25.227+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-20T23:59:25.227350+00:00, run_after=2024-01-21T00:00:25.227350+00:00
+[2024-01-21T00:00:25.244+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.116 seconds
+[2024-01-21T00:00:55.388+0000] {processor.py:157} INFO - Started process (PID=2935) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:00:55.389+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:00:55.390+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:00:55.390+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:00:55.451+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:00:55.470+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:00:55.470+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:00:55.485+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:00:55.485+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-20T23:59:55.485393+00:00, run_after=2024-01-21T00:00:55.485393+00:00
+[2024-01-21T00:00:55.504+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.119 seconds
+[2024-01-21T00:01:26.035+0000] {processor.py:157} INFO - Started process (PID=2955) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:01:26.036+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:01:26.037+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:01:26.037+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:01:26.129+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:01:26.162+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:01:26.162+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:01:26.183+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:01:26.183+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:00:26.183295+00:00, run_after=2024-01-21T00:01:26.183295+00:00
+[2024-01-21T00:01:26.204+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.171 seconds
+[2024-01-21T00:01:56.399+0000] {processor.py:157} INFO - Started process (PID=2982) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:01:56.399+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:01:56.400+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:01:56.400+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:01:56.475+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:01:56.497+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:01:56.496+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:01:56.516+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:01:56.516+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:00:56.516114+00:00, run_after=2024-01-21T00:01:56.516114+00:00
+[2024-01-21T00:01:56.540+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.144 seconds
+[2024-01-21T00:02:27.438+0000] {processor.py:157} INFO - Started process (PID=2991) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:02:27.439+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:02:27.441+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:02:27.440+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:02:27.509+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:02:27.533+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:02:27.533+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:02:27.553+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:02:27.553+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:01:27.552795+00:00, run_after=2024-01-21T00:02:27.552795+00:00
+[2024-01-21T00:02:27.571+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.137 seconds
+[2024-01-21T00:02:57.798+0000] {processor.py:157} INFO - Started process (PID=3016) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:02:57.798+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:02:57.800+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:02:57.799+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:02:57.865+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:02:57.891+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:02:57.890+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:02:57.916+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:02:57.916+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:01:57.915832+00:00, run_after=2024-01-21T00:02:57.915832+00:00
+[2024-01-21T00:02:57.942+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.148 seconds
+[2024-01-21T00:03:28.045+0000] {processor.py:157} INFO - Started process (PID=3041) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:03:28.046+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:03:28.047+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:03:28.047+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:03:28.107+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:03:28.129+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:03:28.129+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:03:28.148+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:03:28.148+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:02:28.148135+00:00, run_after=2024-01-21T00:03:28.148135+00:00
+[2024-01-21T00:03:28.171+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.129 seconds
+[2024-01-21T00:03:58.444+0000] {processor.py:157} INFO - Started process (PID=3067) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:03:58.445+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:03:58.446+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:03:58.445+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:03:58.531+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:03:58.573+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:03:58.573+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:03:58.608+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:03:58.608+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:02:58.608229+00:00, run_after=2024-01-21T00:03:58.608229+00:00
+[2024-01-21T00:03:58.645+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.205 seconds
+[2024-01-21T00:04:28.752+0000] {processor.py:157} INFO - Started process (PID=3077) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:04:28.753+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:04:28.754+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:04:28.754+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:04:28.821+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:04:28.845+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:04:28.845+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:04:28.864+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:04:28.864+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:03:28.864151+00:00, run_after=2024-01-21T00:04:28.864151+00:00
+[2024-01-21T00:04:28.883+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.134 seconds
+[2024-01-21T00:04:59.006+0000] {processor.py:157} INFO - Started process (PID=3101) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:04:59.007+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:04:59.011+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:04:59.010+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:04:59.101+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:04:59.129+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:04:59.128+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:04:59.258+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:04:59.258+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:03:59.258276+00:00, run_after=2024-01-21T00:04:59.258276+00:00
+[2024-01-21T00:04:59.276+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.273 seconds
+[2024-01-21T00:05:29.391+0000] {processor.py:157} INFO - Started process (PID=3126) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:05:29.392+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:05:29.393+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:05:29.392+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:05:29.448+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:05:29.469+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:05:29.468+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:05:29.485+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:05:29.485+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:04:29.485003+00:00, run_after=2024-01-21T00:05:29.485003+00:00
+[2024-01-21T00:05:29.503+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.114 seconds
+[2024-01-21T00:05:59.620+0000] {processor.py:157} INFO - Started process (PID=3151) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:05:59.621+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:05:59.622+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:05:59.621+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:05:59.682+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:05:59.709+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:05:59.709+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:05:59.817+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:05:59.817+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:04:59.817290+00:00, run_after=2024-01-21T00:05:59.817290+00:00
+[2024-01-21T00:05:59.837+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.221 seconds
+[2024-01-21T00:06:29.927+0000] {processor.py:157} INFO - Started process (PID=3160) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:06:29.927+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:06:29.928+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:06:29.928+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:06:29.990+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:06:30.013+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:06:30.013+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:06:30.034+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:06:30.034+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:05:30.034552+00:00, run_after=2024-01-21T00:06:30.034552+00:00
+[2024-01-21T00:06:30.054+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.131 seconds
+[2024-01-21T00:07:00.235+0000] {processor.py:157} INFO - Started process (PID=3184) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:07:00.236+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:07:00.236+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:07:00.236+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:07:00.297+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:07:00.321+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:07:00.321+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:07:00.429+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:07:00.429+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:06:00.428929+00:00, run_after=2024-01-21T00:07:00.428929+00:00
+[2024-01-21T00:07:00.446+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.214 seconds
+[2024-01-21T00:07:30.676+0000] {processor.py:157} INFO - Started process (PID=3209) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:07:30.676+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:07:30.677+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:07:30.677+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:07:30.735+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:07:30.755+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:07:30.755+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:07:30.773+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:07:30.772+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:06:30.772621+00:00, run_after=2024-01-21T00:07:30.772621+00:00
+[2024-01-21T00:07:30.794+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.121 seconds
+[2024-01-21T00:08:00.980+0000] {processor.py:157} INFO - Started process (PID=3233) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:08:00.981+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:08:00.982+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:08:00.981+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:08:01.039+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:08:01.061+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:08:01.061+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:08:01.161+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:08:01.161+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:07:01.161018+00:00, run_after=2024-01-21T00:08:01.161018+00:00
+[2024-01-21T00:08:01.190+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.212 seconds
+[2024-01-21T00:08:31.307+0000] {processor.py:157} INFO - Started process (PID=3243) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:08:31.307+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:08:31.308+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:08:31.308+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:08:31.369+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:08:31.391+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:08:31.391+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:08:31.408+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:08:31.408+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:07:31.408113+00:00, run_after=2024-01-21T00:08:31.408113+00:00
+[2024-01-21T00:08:31.427+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.123 seconds
+[2024-01-21T00:09:01.638+0000] {processor.py:157} INFO - Started process (PID=3268) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:09:01.640+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:09:01.641+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:09:01.641+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:09:01.734+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:09:01.767+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:09:01.767+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:09:01.911+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:09:01.911+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:08:01.911215+00:00, run_after=2024-01-21T00:09:01.911215+00:00
+[2024-01-21T00:09:01.934+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.301 seconds
+[2024-01-21T00:09:31.971+0000] {processor.py:157} INFO - Started process (PID=3293) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:09:31.971+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:09:31.972+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:09:31.972+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:09:32.033+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:09:32.053+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:09:32.052+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:09:32.068+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:09:32.068+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:08:32.068303+00:00, run_after=2024-01-21T00:09:32.068303+00:00
+[2024-01-21T00:09:32.084+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.116 seconds
+[2024-01-21T00:10:02.904+0000] {processor.py:157} INFO - Started process (PID=3315) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:10:02.905+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:10:02.906+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:10:02.906+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:10:02.963+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:10:02.982+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:10:02.982+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:10:03.085+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:10:03.085+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:09:03.085373+00:00, run_after=2024-01-21T00:10:03.085373+00:00
+[2024-01-21T00:10:03.102+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.201 seconds
+[2024-01-21T00:10:33.252+0000] {processor.py:157} INFO - Started process (PID=3324) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:10:33.253+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:10:33.254+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:10:33.254+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:10:33.316+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:10:33.338+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:10:33.338+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:10:33.355+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:10:33.355+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:09:33.355221+00:00, run_after=2024-01-21T00:10:33.355221+00:00
+[2024-01-21T00:10:33.374+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.124 seconds
+[2024-01-21T00:11:03.515+0000] {processor.py:157} INFO - Started process (PID=3348) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:11:03.517+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:11:03.519+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:11:03.518+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:11:03.595+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:11:03.620+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:11:03.620+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:11:03.739+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:11:03.739+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:10:03.739672+00:00, run_after=2024-01-21T00:11:03.739672+00:00
+[2024-01-21T00:11:03.758+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.250 seconds
+[2024-01-21T00:11:33.807+0000] {processor.py:157} INFO - Started process (PID=3374) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:11:33.808+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:11:33.809+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:11:33.809+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:11:33.875+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:11:33.983+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:11:33.983+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:11:34.000+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:11:34.000+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:10:34.000290+00:00, run_after=2024-01-21T00:11:34.000290+00:00
+[2024-01-21T00:11:34.020+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.217 seconds
+[2024-01-21T00:12:04.744+0000] {processor.py:157} INFO - Started process (PID=3397) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:12:04.745+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:12:04.747+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:12:04.746+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:12:04.829+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:12:04.858+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:12:04.857+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:12:04.884+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:12:04.884+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:11:04.884007+00:00, run_after=2024-01-21T00:12:04.884007+00:00
+[2024-01-21T00:12:04.997+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.257 seconds
+[2024-01-21T00:12:35.079+0000] {processor.py:157} INFO - Started process (PID=3406) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:12:35.080+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:12:35.081+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:12:35.081+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:12:35.136+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:12:35.159+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:12:35.158+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:12:35.257+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:12:35.257+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:11:35.257291+00:00, run_after=2024-01-21T00:12:35.257291+00:00
+[2024-01-21T00:12:35.273+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.196 seconds
+[2024-01-21T00:13:05.378+0000] {processor.py:157} INFO - Started process (PID=3430) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:13:05.378+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:13:05.379+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:13:05.379+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:13:05.530+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:13:05.549+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:13:05.548+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:13:05.563+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:13:05.562+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:12:05.562815+00:00, run_after=2024-01-21T00:13:05.562815+00:00
+[2024-01-21T00:13:05.578+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.204 seconds
+[2024-01-21T00:13:36.239+0000] {processor.py:157} INFO - Started process (PID=3455) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:13:36.239+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:13:36.241+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:13:36.240+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:13:36.304+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:13:36.325+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:13:36.325+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:13:36.436+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:13:36.436+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:12:36.436616+00:00, run_after=2024-01-21T00:13:36.436616+00:00
+[2024-01-21T00:13:36.453+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.217 seconds
+[2024-01-21T00:14:06.537+0000] {processor.py:157} INFO - Started process (PID=3480) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:14:06.538+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:14:06.538+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:14:06.538+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:14:06.696+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:14:06.713+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:14:06.713+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:14:06.728+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:14:06.728+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:13:06.727955+00:00, run_after=2024-01-21T00:14:06.727955+00:00
+[2024-01-21T00:14:06.744+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.210 seconds
+[2024-01-21T00:14:36.929+0000] {processor.py:157} INFO - Started process (PID=3490) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:14:36.930+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:14:36.931+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:14:36.931+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:14:36.995+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:14:37.020+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:14:37.020+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:14:37.131+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:14:37.131+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:13:37.131385+00:00, run_after=2024-01-21T00:14:37.131385+00:00
+[2024-01-21T00:14:37.147+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.220 seconds
+[2024-01-21T00:15:07.428+0000] {processor.py:157} INFO - Started process (PID=3514) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:15:07.429+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:15:07.430+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:15:07.430+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:15:07.492+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:15:07.620+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:15:07.619+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:15:07.636+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:15:07.636+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:14:07.635964+00:00, run_after=2024-01-21T00:15:07.635964+00:00
+[2024-01-21T00:15:07.652+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.227 seconds
+[2024-01-21T00:15:38.506+0000] {processor.py:157} INFO - Started process (PID=3539) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:15:38.507+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:15:38.508+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:15:38.508+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:15:38.662+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:15:38.678+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:15:38.678+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:15:38.693+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:15:38.693+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:14:38.693479+00:00, run_after=2024-01-21T00:15:38.693479+00:00
+[2024-01-21T00:15:38.710+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.208 seconds
+[2024-01-21T00:16:09.384+0000] {processor.py:157} INFO - Started process (PID=3563) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:16:09.385+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:16:09.386+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:16:09.386+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:16:09.454+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:16:09.476+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:16:09.475+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:16:09.589+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:16:09.589+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:15:09.589404+00:00, run_after=2024-01-21T00:16:09.589404+00:00
+[2024-01-21T00:16:09.608+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.227 seconds
+[2024-01-21T00:16:39.695+0000] {processor.py:157} INFO - Started process (PID=3572) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:16:39.695+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:16:39.696+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:16:39.696+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:16:39.854+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:16:39.873+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:16:39.873+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:16:39.888+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:16:39.888+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:15:39.888058+00:00, run_after=2024-01-21T00:16:39.888058+00:00
+[2024-01-21T00:16:39.908+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.216 seconds
+[2024-01-21T00:17:10.039+0000] {processor.py:157} INFO - Started process (PID=3597) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:17:10.040+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:17:10.041+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:17:10.041+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:17:10.106+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:17:10.128+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:17:10.127+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:17:10.236+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:17:10.236+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:16:10.236299+00:00, run_after=2024-01-21T00:17:10.236299+00:00
+[2024-01-21T00:17:10.253+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.217 seconds
+[2024-01-21T00:17:40.872+0000] {processor.py:157} INFO - Started process (PID=3622) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:17:40.872+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:17:40.873+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:17:40.873+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:17:41.027+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:17:41.043+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:17:41.043+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:17:41.058+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:17:41.058+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:16:41.057881+00:00, run_after=2024-01-21T00:17:41.057881+00:00
+[2024-01-21T00:17:41.079+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.210 seconds
+[2024-01-21T00:18:11.276+0000] {processor.py:157} INFO - Started process (PID=3646) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:18:11.276+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:18:11.278+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:18:11.277+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:18:11.339+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:18:11.359+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:18:11.359+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:18:11.469+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:18:11.469+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:17:11.469566+00:00, run_after=2024-01-21T00:18:11.469566+00:00
+[2024-01-21T00:18:11.485+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.213 seconds
+[2024-01-21T00:18:42.228+0000] {processor.py:157} INFO - Started process (PID=3656) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:18:42.229+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:18:42.230+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:18:42.230+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:18:42.391+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:18:42.408+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:18:42.408+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:18:42.422+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:18:42.422+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:17:42.422605+00:00, run_after=2024-01-21T00:18:42.422605+00:00
+[2024-01-21T00:18:42.439+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.215 seconds
+[2024-01-21T00:19:12.667+0000] {processor.py:157} INFO - Started process (PID=3677) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:19:12.668+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:19:12.669+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:19:12.669+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:19:12.871+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:19:12.891+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:19:12.891+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:19:12.913+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:19:12.912+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:18:12.912413+00:00, run_after=2024-01-21T00:19:12.912413+00:00
+[2024-01-21T00:19:12.936+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.272 seconds
+[2024-01-21T00:19:43.019+0000] {processor.py:157} INFO - Started process (PID=3702) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:19:43.019+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:19:43.021+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:19:43.020+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:19:43.087+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:19:43.202+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:19:43.202+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:19:43.217+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:19:43.217+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:18:43.217425+00:00, run_after=2024-01-21T00:19:43.217425+00:00
+[2024-01-21T00:19:43.241+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.226 seconds
+[2024-01-21T00:20:13.304+0000] {processor.py:157} INFO - Started process (PID=3712) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:20:13.306+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:20:13.307+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:20:13.307+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:20:13.471+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:20:13.489+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:20:13.489+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:20:13.504+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:20:13.504+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:19:13.504023+00:00, run_after=2024-01-21T00:20:13.504023+00:00
+[2024-01-21T00:20:13.519+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.218 seconds
+[2024-01-21T00:20:44.415+0000] {processor.py:157} INFO - Started process (PID=3721) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:20:44.416+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:20:44.416+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:20:44.416+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:20:44.478+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:20:44.586+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:20:44.586+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:20:44.601+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:20:44.600+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:19:44.600778+00:00, run_after=2024-01-21T00:20:44.600778+00:00
+[2024-01-21T00:20:44.615+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.203 seconds
+[2024-01-21T00:21:14.668+0000] {processor.py:157} INFO - Started process (PID=3730) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:21:14.669+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:21:14.670+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:21:14.670+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:21:14.827+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:21:14.845+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:21:14.845+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:21:14.860+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:21:14.860+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:20:14.860004+00:00, run_after=2024-01-21T00:21:14.860004+00:00
+[2024-01-21T00:21:14.877+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.211 seconds
+[2024-01-21T00:21:44.950+0000] {processor.py:157} INFO - Started process (PID=3739) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:21:44.951+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:21:44.952+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:21:44.952+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:21:45.100+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:21:45.119+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:21:45.119+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:21:45.134+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:21:45.134+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:20:45.134573+00:00, run_after=2024-01-21T00:21:45.134573+00:00
+[2024-01-21T00:21:45.149+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.201 seconds
+[2024-01-21T00:22:15.351+0000] {processor.py:157} INFO - Started process (PID=3769) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:22:15.354+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:22:15.358+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:22:15.357+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:22:15.570+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:22:15.594+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:22:15.594+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:22:15.614+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:22:15.613+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:21:15.613707+00:00, run_after=2024-01-21T00:22:15.613707+00:00
+[2024-01-21T00:22:15.631+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.287 seconds
+[2024-01-21T00:22:45.784+0000] {processor.py:157} INFO - Started process (PID=3798) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:22:45.784+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:22:45.785+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:22:45.785+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:22:45.925+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:22:45.942+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:22:45.942+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:22:45.957+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:22:45.957+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:21:45.957508+00:00, run_after=2024-01-21T00:22:45.957508+00:00
+[2024-01-21T00:22:45.973+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.192 seconds
+[2024-01-21T00:23:16.132+0000] {processor.py:157} INFO - Started process (PID=3818) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:23:16.134+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:23:16.135+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:23:16.135+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:23:16.343+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:23:16.362+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:23:16.362+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:23:16.378+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:23:16.378+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:22:16.378369+00:00, run_after=2024-01-21T00:23:16.378369+00:00
+[2024-01-21T00:23:16.400+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.271 seconds
+[2024-01-21T00:23:46.678+0000] {processor.py:157} INFO - Started process (PID=3827) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:23:46.682+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:23:46.683+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:23:46.683+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:23:46.842+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:23:46.862+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:23:46.861+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:23:46.881+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:23:46.881+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:22:46.881287+00:00, run_after=2024-01-21T00:23:46.881287+00:00
+[2024-01-21T00:23:46.897+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.221 seconds
+[2024-01-21T00:24:17.241+0000] {processor.py:157} INFO - Started process (PID=3860) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:24:17.242+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:24:17.243+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:24:17.243+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:24:17.409+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:24:17.429+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:24:17.429+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:24:17.445+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:24:17.445+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:23:17.445259+00:00, run_after=2024-01-21T00:24:17.445259+00:00
+[2024-01-21T00:24:17.461+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.224 seconds
+[2024-01-21T00:24:48.104+0000] {processor.py:157} INFO - Started process (PID=3873) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:24:48.105+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:24:48.107+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:24:48.107+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:24:48.168+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:24:48.189+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:24:48.189+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:24:48.208+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:24:48.208+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:23:48.208206+00:00, run_after=2024-01-21T00:24:48.208206+00:00
+[2024-01-21T00:24:48.226+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.125 seconds
+[2024-01-21T00:25:18.890+0000] {processor.py:157} INFO - Started process (PID=3894) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:25:18.891+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:25:18.892+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:25:18.892+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:25:18.959+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:25:18.981+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:25:18.981+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:25:19.000+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:25:18.999+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:24:18.999634+00:00, run_after=2024-01-21T00:25:18.999634+00:00
+[2024-01-21T00:25:19.019+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.131 seconds
+[2024-01-21T00:25:49.770+0000] {processor.py:157} INFO - Started process (PID=3903) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:25:49.771+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:25:49.772+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:25:49.772+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:25:49.841+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:25:49.862+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:25:49.862+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:25:49.880+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:25:49.880+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:24:49.880357+00:00, run_after=2024-01-21T00:25:49.880357+00:00
+[2024-01-21T00:25:49.898+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.131 seconds
+[2024-01-21T00:26:20.620+0000] {processor.py:157} INFO - Started process (PID=3940) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:26:20.621+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:26:20.622+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:26:20.622+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:26:20.693+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:26:20.719+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:26:20.718+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:26:20.742+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:26:20.742+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:25:20.741898+00:00, run_after=2024-01-21T00:26:20.741898+00:00
+[2024-01-21T00:26:20.762+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.145 seconds
+[2024-01-21T00:26:51.419+0000] {processor.py:157} INFO - Started process (PID=3949) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:26:51.420+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:26:51.421+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:26:51.420+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:26:51.476+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:26:51.497+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:26:51.496+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:26:51.515+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:26:51.515+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:25:51.515021+00:00, run_after=2024-01-21T00:26:51.515021+00:00
+[2024-01-21T00:26:51.531+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.114 seconds
+[2024-01-21T00:27:22.139+0000] {processor.py:157} INFO - Started process (PID=3969) to work on /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:27:22.139+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/kafka_stream_5.py for tasks to queue
+[2024-01-21T00:27:22.140+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:27:22.140+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:27:22.200+0000] {processor.py:839} INFO - DAG(s) dict_keys(['Kafka_Producer_5']) retrieved from /opt/airflow/dags/kafka_stream_5.py
+[2024-01-21T00:27:22.221+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:27:22.220+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-01-21T00:27:22.238+0000] {logging_mixin.py:151} INFO - [2024-01-21T00:27:22.237+0000] {dag.py:3677} INFO - Setting next_dagrun for Kafka_Producer_5 to 2024-01-21T00:26:22.237685+00:00, run_after=2024-01-21T00:27:22.237685+00:00
+[2024-01-21T00:27:22.255+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/kafka_stream_5.py took 0.120 seconds

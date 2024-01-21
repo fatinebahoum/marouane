@@ -1,0 +1,14 @@
+[2024-01-20T23:43:18.707+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Kafka_Producer_2.coinMarket scheduled__2024-01-20T23:41:16.788948+00:00 [queued]>
+[2024-01-20T23:43:18.712+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Kafka_Producer_2.coinMarket scheduled__2024-01-20T23:41:16.788948+00:00 [queued]>
+[2024-01-20T23:43:18.713+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-20T23:43:18.723+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): coinMarket> on 2024-01-20 23:41:16.788948+00:00
+[2024-01-20T23:43:18.726+0000] {standard_task_runner.py:57} INFO - Started process 2223 to run task
+[2024-01-20T23:43:18.728+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Kafka_Producer_2', 'coinMarket', 'scheduled__2024-01-20T23:41:16.788948+00:00', '--job-id', '1525', '--raw', '--subdir', 'DAGS_FOLDER/kafka_stream_2.py', '--cfg-path', '/tmp/tmpbplvvfx3']
+[2024-01-20T23:43:18.729+0000] {standard_task_runner.py:85} INFO - Job 1525: Subtask coinMarket
+[2024-01-20T23:43:18.771+0000] {task_command.py:415} INFO - Running <TaskInstance: Kafka_Producer_2.coinMarket scheduled__2024-01-20T23:41:16.788948+00:00 [running]> on host 45c5bfab8aa1
+[2024-01-20T23:43:18.840+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='me' AIRFLOW_CTX_DAG_ID='Kafka_Producer_2' AIRFLOW_CTX_TASK_ID='coinMarket' AIRFLOW_CTX_EXECUTION_DATE='2024-01-20T23:41:16.788948+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-01-20T23:41:16.788948+00:00'
+[2024-01-20T23:43:28.880+0000] {logging_mixin.py:151} INFO - HTTPSConnectionPool(host='pro-api.coinmarketcap.com', port=443): Max retries exceeded with url: /v1/cryptocurrency/listings/latest?start=1&convert=USD (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f70b65732b0>: Failed to resolve 'pro-api.coinmarketcap.com' ([Errno -3] Temporary failure in name resolution)"))
+[2024-01-20T23:43:28.881+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-01-20T23:43:28.945+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=Kafka_Producer_2, task_id=coinMarket, execution_date=20240120T234116, start_date=20240120T234318, end_date=20240120T234328
+[2024-01-20T23:43:28.978+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-01-20T23:43:28.994+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

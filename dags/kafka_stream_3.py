@@ -10,6 +10,8 @@ from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import requests
 import logging
 import subprocess
+from uuid import uuid4
+
 
 default_args = {
     'owner': 'me',
@@ -44,16 +46,17 @@ def coinMarket_function():
 
         if bitcoin_data:
             data = {
-                'Name': bitcoin_data['name'],
-                'Symbol': bitcoin_data['symbol'],
+                'id': str(uuid4()),
+                'name': bitcoin_data['name'],
+                'symbol': bitcoin_data['symbol'],
                 'num_market_pairs': bitcoin_data['num_market_pairs'],
                 'max_supply': bitcoin_data['max_supply'],
                 'infinite_supply': bitcoin_data['infinite_supply'],
                 'last_updated': bitcoin_data['last_updated'],
-                'Price (USD)': bitcoin_data['quote']['USD']['price'],
-                'Market Cap (USD)': bitcoin_data['quote']['USD']['market_cap'],
-                'Volume 24h (USD)': bitcoin_data['quote']['USD']['volume_24h'],
-                'Percent Change 24h': bitcoin_data['quote']['USD']['percent_change_24h'],
+                'price_usd': bitcoin_data['quote']['USD']['price'],
+                'market_cap_usd': bitcoin_data['quote']['USD']['market_cap'],
+                'volume_24h_usd': bitcoin_data['quote']['USD']['volume_24h'],
+                'percent_change_24h': bitcoin_data['quote']['USD']['percent_change_24h'],
                 'percent_change_1h': bitcoin_data['quote']['USD']['percent_change_1h'],
             }
 
@@ -107,7 +110,7 @@ def reddit_function():
                     else:
                         post_info[key] = submission.__dict__[key]
                 post_info['created_utc'] = datetime.utcfromtimestamp(post_info['created_utc']).strftime('%Y-%m-%d %H:%M:%S')
-    
+                post_info['id'] = str(uuid.uuid4())
                 producer = KafkaProducer(bootstrap_servers=['broker:29092'], max_block_ms=5000)
                 producer.send('reddit_data', json.dumps(post_info).encode('utf-8'))
             

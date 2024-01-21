@@ -1,0 +1,364 @@
+[2024-01-20T19:23:42.792+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Stream_reddit_to_cassandra.submit_spark_job manual__2024-01-20T19:19:48.044287+00:00 [queued]>
+[2024-01-20T19:23:42.798+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Stream_reddit_to_cassandra.submit_spark_job manual__2024-01-20T19:19:48.044287+00:00 [queued]>
+[2024-01-20T19:23:42.799+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-01-20T19:23:42.815+0000] {taskinstance.py:1382} INFO - Executing <Task(SparkSubmitOperator): submit_spark_job> on 2024-01-20 19:19:48.044287+00:00
+[2024-01-20T19:23:42.819+0000] {standard_task_runner.py:57} INFO - Started process 1604 to run task
+[2024-01-20T19:23:42.822+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Stream_reddit_to_cassandra', 'submit_spark_job', 'manual__2024-01-20T19:19:48.044287+00:00', '--job-id', '1151', '--raw', '--subdir', 'DAGS_FOLDER/stream_reddit.py', '--cfg-path', '/tmp/tmplw6lzwtt']
+[2024-01-20T19:23:42.823+0000] {standard_task_runner.py:85} INFO - Job 1151: Subtask submit_spark_job
+[2024-01-20T19:23:42.870+0000] {task_command.py:415} INFO - Running <TaskInstance: Stream_reddit_to_cassandra.submit_spark_job manual__2024-01-20T19:19:48.044287+00:00 [running]> on host 45c5bfab8aa1
+[2024-01-20T19:23:42.932+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Stream_reddit_to_cassandra' AIRFLOW_CTX_TASK_ID='submit_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2024-01-20T19:19:48.044287+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-20T19:19:48.044287+00:00'
+[2024-01-20T19:23:42.939+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2024-01-20T19:23:42.940+0000] {spark_submit.py:401} INFO - Spark-Submit cmd: spark-submit --master spark://172.19.0.4:7077 --conf spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2 --conf spark.jars.excludes=org.scala-lang:scala-reflect --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 --name arrow-spark --queue root.default --deploy-mode client /opt/***/shared_volume/stream_reddit.py
+[2024-01-20T19:23:43.048+0000] {spark_submit.py:571} INFO - /home/***/.local/lib/python3.9/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2024-01-20T19:23:44.178+0000] {spark_submit.py:571} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.9/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2024-01-20T19:23:44.294+0000] {spark_submit.py:571} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2024-01-20T19:23:44.295+0000] {spark_submit.py:571} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2024-01-20T19:23:44.297+0000] {spark_submit.py:571} INFO - com.datastax.spark#spark-cassandra-connector_2.12 added as a dependency
+[2024-01-20T19:23:44.297+0000] {spark_submit.py:571} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2024-01-20T19:23:44.298+0000] {spark_submit.py:571} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-0fd61b03-b61b-45d9-90bd-cebb71eb102b;1.0
+[2024-01-20T19:23:44.298+0000] {spark_submit.py:571} INFO - confs: [default]
+[2024-01-20T19:23:44.371+0000] {spark_submit.py:571} INFO - found com.datastax.spark#spark-cassandra-connector_2.12;3.4.1 in central
+[2024-01-20T19:23:44.393+0000] {spark_submit.py:571} INFO - found com.datastax.spark#spark-cassandra-connector-driver_2.12;3.4.1 in central
+[2024-01-20T19:23:44.412+0000] {spark_submit.py:571} INFO - found org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 in central
+[2024-01-20T19:23:44.433+0000] {spark_submit.py:571} INFO - found com.datastax.oss#java-driver-core-shaded;4.13.0 in central
+[2024-01-20T19:23:44.445+0000] {spark_submit.py:571} INFO - found com.datastax.oss#native-protocol;1.5.0 in central
+[2024-01-20T19:23:44.456+0000] {spark_submit.py:571} INFO - found com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 in central
+[2024-01-20T19:23:44.466+0000] {spark_submit.py:571} INFO - found com.typesafe#config;1.4.1 in central
+[2024-01-20T19:23:44.476+0000] {spark_submit.py:571} INFO - found org.slf4j#slf4j-api;1.7.26 in central
+[2024-01-20T19:23:44.487+0000] {spark_submit.py:571} INFO - found io.dropwizard.metrics#metrics-core;4.1.18 in central
+[2024-01-20T19:23:44.499+0000] {spark_submit.py:571} INFO - found org.hdrhistogram#HdrHistogram;2.1.12 in central
+[2024-01-20T19:23:44.507+0000] {spark_submit.py:571} INFO - found org.reactivestreams#reactive-streams;1.0.3 in central
+[2024-01-20T19:23:44.515+0000] {spark_submit.py:571} INFO - found com.github.stephenc.jcip#jcip-annotations;1.0-1 in central
+[2024-01-20T19:23:44.522+0000] {spark_submit.py:571} INFO - found com.github.spotbugs#spotbugs-annotations;3.1.12 in central
+[2024-01-20T19:23:44.530+0000] {spark_submit.py:571} INFO - found com.google.code.findbugs#jsr305;3.0.2 in central
+[2024-01-20T19:23:44.539+0000] {spark_submit.py:571} INFO - found com.datastax.oss#java-driver-mapper-runtime;4.13.0 in central
+[2024-01-20T19:23:44.549+0000] {spark_submit.py:571} INFO - found com.datastax.oss#java-driver-query-builder;4.13.0 in central
+[2024-01-20T19:23:44.569+0000] {spark_submit.py:571} INFO - found org.apache.commons#commons-lang3;3.10 in central
+[2024-01-20T19:23:44.576+0000] {spark_submit.py:571} INFO - found com.thoughtworks.paranamer#paranamer;2.8 in central
+[2024-01-20T19:23:44.593+0000] {spark_submit.py:571} INFO - found org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1 in central
+[2024-01-20T19:23:44.607+0000] {spark_submit.py:571} INFO - found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.1 in central
+[2024-01-20T19:23:44.614+0000] {spark_submit.py:571} INFO - found org.apache.kafka#kafka-clients;3.3.2 in central
+[2024-01-20T19:23:44.622+0000] {spark_submit.py:571} INFO - found org.lz4#lz4-java;1.8.0 in central
+[2024-01-20T19:23:44.632+0000] {spark_submit.py:571} INFO - found org.xerial.snappy#snappy-java;1.1.10.1 in central
+[2024-01-20T19:23:44.644+0000] {spark_submit.py:571} INFO - found org.slf4j#slf4j-api;2.0.6 in central
+[2024-01-20T19:23:44.653+0000] {spark_submit.py:571} INFO - found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+[2024-01-20T19:23:44.663+0000] {spark_submit.py:571} INFO - found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+[2024-01-20T19:23:44.671+0000] {spark_submit.py:571} INFO - found commons-logging#commons-logging;1.1.3 in central
+[2024-01-20T19:23:44.679+0000] {spark_submit.py:571} INFO - found org.apache.commons#commons-pool2;2.11.1 in central
+[2024-01-20T19:23:44.695+0000] {spark_submit.py:571} INFO - :: resolution report :: resolve 388ms :: artifacts dl 9ms
+[2024-01-20T19:23:44.696+0000] {spark_submit.py:571} INFO - :: modules in use:
+[2024-01-20T19:23:44.697+0000] {spark_submit.py:571} INFO - com.datastax.oss#java-driver-core-shaded;4.13.0 from central in [default]
+[2024-01-20T19:23:44.697+0000] {spark_submit.py:571} INFO - com.datastax.oss#java-driver-mapper-runtime;4.13.0 from central in [default]
+[2024-01-20T19:23:44.697+0000] {spark_submit.py:571} INFO - com.datastax.oss#java-driver-query-builder;4.13.0 from central in [default]
+[2024-01-20T19:23:44.698+0000] {spark_submit.py:571} INFO - com.datastax.oss#java-driver-shaded-guava;25.1-jre-graal-sub-1 from central in [default]
+[2024-01-20T19:23:44.698+0000] {spark_submit.py:571} INFO - com.datastax.oss#native-protocol;1.5.0 from central in [default]
+[2024-01-20T19:23:44.698+0000] {spark_submit.py:571} INFO - com.datastax.spark#spark-cassandra-connector-driver_2.12;3.4.1 from central in [default]
+[2024-01-20T19:23:44.699+0000] {spark_submit.py:571} INFO - com.datastax.spark#spark-cassandra-connector_2.12;3.4.1 from central in [default]
+[2024-01-20T19:23:44.699+0000] {spark_submit.py:571} INFO - com.github.spotbugs#spotbugs-annotations;3.1.12 from central in [default]
+[2024-01-20T19:23:44.699+0000] {spark_submit.py:571} INFO - com.github.stephenc.jcip#jcip-annotations;1.0-1 from central in [default]
+[2024-01-20T19:23:44.700+0000] {spark_submit.py:571} INFO - com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+[2024-01-20T19:23:44.700+0000] {spark_submit.py:571} INFO - com.thoughtworks.paranamer#paranamer;2.8 from central in [default]
+[2024-01-20T19:23:44.701+0000] {spark_submit.py:571} INFO - com.typesafe#config;1.4.1 from central in [default]
+[2024-01-20T19:23:44.701+0000] {spark_submit.py:571} INFO - commons-logging#commons-logging;1.1.3 from central in [default]
+[2024-01-20T19:23:44.701+0000] {spark_submit.py:571} INFO - io.dropwizard.metrics#metrics-core;4.1.18 from central in [default]
+[2024-01-20T19:23:44.702+0000] {spark_submit.py:571} INFO - org.apache.commons#commons-lang3;3.10 from central in [default]
+[2024-01-20T19:23:44.702+0000] {spark_submit.py:571} INFO - org.apache.commons#commons-pool2;2.11.1 from central in [default]
+[2024-01-20T19:23:44.702+0000] {spark_submit.py:571} INFO - org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+[2024-01-20T19:23:44.703+0000] {spark_submit.py:571} INFO - org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+[2024-01-20T19:23:44.703+0000] {spark_submit.py:571} INFO - org.apache.kafka#kafka-clients;3.3.2 from central in [default]
+[2024-01-20T19:23:44.703+0000] {spark_submit.py:571} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1 from central in [default]
+[2024-01-20T19:23:44.704+0000] {spark_submit.py:571} INFO - org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.1 from central in [default]
+[2024-01-20T19:23:44.704+0000] {spark_submit.py:571} INFO - org.hdrhistogram#HdrHistogram;2.1.12 from central in [default]
+[2024-01-20T19:23:44.704+0000] {spark_submit.py:571} INFO - org.lz4#lz4-java;1.8.0 from central in [default]
+[2024-01-20T19:23:44.705+0000] {spark_submit.py:571} INFO - org.reactivestreams#reactive-streams;1.0.3 from central in [default]
+[2024-01-20T19:23:44.705+0000] {spark_submit.py:571} INFO - org.scala-lang.modules#scala-collection-compat_2.12;2.11.0 from central in [default]
+[2024-01-20T19:23:44.705+0000] {spark_submit.py:571} INFO - org.slf4j#slf4j-api;2.0.6 from central in [default]
+[2024-01-20T19:23:44.705+0000] {spark_submit.py:571} INFO - org.xerial.snappy#snappy-java;1.1.10.1 from central in [default]
+[2024-01-20T19:23:44.706+0000] {spark_submit.py:571} INFO - :: evicted modules:
+[2024-01-20T19:23:44.706+0000] {spark_submit.py:571} INFO - org.slf4j#slf4j-api;1.7.26 by [org.slf4j#slf4j-api;2.0.6] in [default]
+[2024-01-20T19:23:44.707+0000] {spark_submit.py:571} INFO - com.google.code.findbugs#jsr305;3.0.0 by [com.google.code.findbugs#jsr305;3.0.2] in [default]
+[2024-01-20T19:23:44.707+0000] {spark_submit.py:571} INFO - ---------------------------------------------------------------------
+[2024-01-20T19:23:44.708+0000] {spark_submit.py:571} INFO - |                  |            modules            ||   artifacts   |
+[2024-01-20T19:23:44.708+0000] {spark_submit.py:571} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2024-01-20T19:23:44.708+0000] {spark_submit.py:571} INFO - ---------------------------------------------------------------------
+[2024-01-20T19:23:44.709+0000] {spark_submit.py:571} INFO - |      default     |   29  |   0   |   0   |   2   ||   27  |   0   |
+[2024-01-20T19:23:44.709+0000] {spark_submit.py:571} INFO - ---------------------------------------------------------------------
+[2024-01-20T19:23:44.709+0000] {spark_submit.py:571} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-0fd61b03-b61b-45d9-90bd-cebb71eb102b
+[2024-01-20T19:23:44.710+0000] {spark_submit.py:571} INFO - confs: [default]
+[2024-01-20T19:23:44.712+0000] {spark_submit.py:571} INFO - 0 artifacts copied, 27 already retrieved (0kB/8ms)
+[2024-01-20T19:23:44.837+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-01-20T19:23:46.590+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SparkContext: Running Spark version 3.4.1
+[2024-01-20T19:23:46.606+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO ResourceUtils: ==============================================================
+[2024-01-20T19:23:46.609+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-01-20T19:23:46.609+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO ResourceUtils: ==============================================================
+[2024-01-20T19:23:46.610+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SparkContext: Submitted application: SparkRedditDataStreaming
+[2024-01-20T19:23:46.625+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-01-20T19:23:46.639+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO ResourceProfile: Limiting resource is cpu
+[2024-01-20T19:23:46.639+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-01-20T19:23:46.675+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SecurityManager: Changing view acls to: ***
+[2024-01-20T19:23:46.676+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SecurityManager: Changing modify acls to: ***
+[2024-01-20T19:23:46.677+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SecurityManager: Changing view acls groups to:
+[2024-01-20T19:23:46.677+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SecurityManager: Changing modify acls groups to:
+[2024-01-20T19:23:46.678+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ***; groups with view permissions: EMPTY; users with modify permissions: ***; groups with modify permissions: EMPTY
+[2024-01-20T19:23:46.835+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO Utils: Successfully started service 'sparkDriver' on port 45349.
+[2024-01-20T19:23:46.853+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SparkEnv: Registering MapOutputTracker
+[2024-01-20T19:23:46.878+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SparkEnv: Registering BlockManagerMaster
+[2024-01-20T19:23:46.891+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-01-20T19:23:46.892+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-01-20T19:23:46.894+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-01-20T19:23:46.911+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-eee45a6b-3cd3-45b8-92ab-d81c3f4660ea
+[2024-01-20T19:23:46.927+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2024-01-20T19:23:46.940+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:46 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-01-20T19:23:47.040+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-01-20T19:23:47.092+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-01-20T19:23:47.119+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar at spark://45c5bfab8aa1:45349/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.120+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar at spark://45c5bfab8aa1:45349/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.120+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar at spark://45c5bfab8aa1:45349/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.121+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar at spark://45c5bfab8aa1:45349/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.121+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.13.0.jar at spark://45c5bfab8aa1:45349/jars/com.datastax.oss_java-driver-core-shaded-4.13.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.122+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar at spark://45c5bfab8aa1:45349/jars/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.122+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar at spark://45c5bfab8aa1:45349/jars/org.apache.commons_commons-lang3-3.10.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.122+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar at spark://45c5bfab8aa1:45349/jars/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.123+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar at spark://45c5bfab8aa1:45349/jars/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.123+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar at spark://45c5bfab8aa1:45349/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.124+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar at spark://45c5bfab8aa1:45349/jars/com.typesafe_config-1.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.124+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar at spark://45c5bfab8aa1:45349/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.124+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar at spark://45c5bfab8aa1:45349/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.124+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar at spark://45c5bfab8aa1:45349/jars/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.125+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar at spark://45c5bfab8aa1:45349/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.125+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar at spark://45c5bfab8aa1:45349/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.125+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar at spark://45c5bfab8aa1:45349/jars/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.126+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.13.0.jar at spark://45c5bfab8aa1:45349/jars/com.datastax.oss_java-driver-query-builder-4.13.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.126+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar at spark://45c5bfab8aa1:45349/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.126+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar at spark://45c5bfab8aa1:45349/jars/org.apache.kafka_kafka-clients-3.3.2.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.126+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://45c5bfab8aa1:45349/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.127+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://45c5bfab8aa1:45349/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.127+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://45c5bfab8aa1:45349/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.127+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.1.jar at spark://45c5bfab8aa1:45349/jars/org.xerial.snappy_snappy-java-1.1.10.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.128+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar at spark://45c5bfab8aa1:45349/jars/org.slf4j_slf4j-api-2.0.6.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.128+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://45c5bfab8aa1:45349/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.128+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://45c5bfab8aa1:45349/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.128+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar at spark://45c5bfab8aa1:45349/files/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.129+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.datastax.spark_spark-cassandra-connector_2.12-3.4.1.jar
+[2024-01-20T19:23:47.136+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar at spark://45c5bfab8aa1:45349/files/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.137+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.1.jar
+[2024-01-20T19:23:47.140+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar at spark://45c5bfab8aa1:45349/files/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.140+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.datastax.spark_spark-cassandra-connector-driver_2.12-3.4.1.jar
+[2024-01-20T19:23:47.144+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar at spark://45c5bfab8aa1:45349/files/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.145+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.scala-lang.modules_scala-collection-compat_2.12-2.11.0.jar
+[2024-01-20T19:23:47.149+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.13.0.jar at spark://45c5bfab8aa1:45349/files/com.datastax.oss_java-driver-core-shaded-4.13.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.149+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-core-shaded-4.13.0.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.datastax.oss_java-driver-core-shaded-4.13.0.jar
+[2024-01-20T19:23:47.159+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar at spark://45c5bfab8aa1:45349/files/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.160+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.datastax.oss_java-driver-mapper-runtime-4.13.0.jar
+[2024-01-20T19:23:47.163+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar at spark://45c5bfab8aa1:45349/files/org.apache.commons_commons-lang3-3.10.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.164+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.commons_commons-lang3-3.10.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.apache.commons_commons-lang3-3.10.jar
+[2024-01-20T19:23:47.168+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar at spark://45c5bfab8aa1:45349/files/com.thoughtworks.paranamer_paranamer-2.8.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.169+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.8.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.thoughtworks.paranamer_paranamer-2.8.jar
+[2024-01-20T19:23:47.172+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar at spark://45c5bfab8aa1:45349/files/com.datastax.oss_native-protocol-1.5.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.173+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_native-protocol-1.5.0.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.datastax.oss_native-protocol-1.5.0.jar
+[2024-01-20T19:23:47.176+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar at spark://45c5bfab8aa1:45349/files/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.177+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.datastax.oss_java-driver-shaded-guava-25.1-jre-graal-sub-1.jar
+[2024-01-20T19:23:47.185+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar at spark://45c5bfab8aa1:45349/files/com.typesafe_config-1.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.186+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.typesafe_config-1.4.1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.typesafe_config-1.4.1.jar
+[2024-01-20T19:23:47.190+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar at spark://45c5bfab8aa1:45349/files/io.dropwizard.metrics_metrics-core-4.1.18.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.191+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/io.dropwizard.metrics_metrics-core-4.1.18.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/io.dropwizard.metrics_metrics-core-4.1.18.jar
+[2024-01-20T19:23:47.194+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar at spark://45c5bfab8aa1:45349/files/org.hdrhistogram_HdrHistogram-2.1.12.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.195+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.hdrhistogram_HdrHistogram-2.1.12.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.hdrhistogram_HdrHistogram-2.1.12.jar
+[2024-01-20T19:23:47.198+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar at spark://45c5bfab8aa1:45349/files/org.reactivestreams_reactive-streams-1.0.3.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.198+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.reactivestreams_reactive-streams-1.0.3.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.reactivestreams_reactive-streams-1.0.3.jar
+[2024-01-20T19:23:47.201+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar at spark://45c5bfab8aa1:45349/files/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.202+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.github.stephenc.jcip_jcip-annotations-1.0-1.jar
+[2024-01-20T19:23:47.205+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar at spark://45c5bfab8aa1:45349/files/com.github.spotbugs_spotbugs-annotations-3.1.12.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.206+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.github.spotbugs_spotbugs-annotations-3.1.12.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.github.spotbugs_spotbugs-annotations-3.1.12.jar
+[2024-01-20T19:23:47.208+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar at spark://45c5bfab8aa1:45349/files/com.google.code.findbugs_jsr305-3.0.2.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.209+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.2.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.google.code.findbugs_jsr305-3.0.2.jar
+[2024-01-20T19:23:47.212+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.13.0.jar at spark://45c5bfab8aa1:45349/files/com.datastax.oss_java-driver-query-builder-4.13.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.212+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/com.datastax.oss_java-driver-query-builder-4.13.0.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/com.datastax.oss_java-driver-query-builder-4.13.0.jar
+[2024-01-20T19:23:47.217+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar at spark://45c5bfab8aa1:45349/files/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.218+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.1.jar
+[2024-01-20T19:23:47.221+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar at spark://45c5bfab8aa1:45349/files/org.apache.kafka_kafka-clients-3.3.2.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.221+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.apache.kafka_kafka-clients-3.3.2.jar
+[2024-01-20T19:23:47.229+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://45c5bfab8aa1:45349/files/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.229+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.apache.commons_commons-pool2-2.11.1.jar
+[2024-01-20T19:23:47.232+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://45c5bfab8aa1:45349/files/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.233+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+[2024-01-20T19:23:47.255+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://45c5bfab8aa1:45349/files/org.lz4_lz4-java-1.8.0.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.256+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.lz4_lz4-java-1.8.0.jar
+[2024-01-20T19:23:47.259+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.1.jar at spark://45c5bfab8aa1:45349/files/org.xerial.snappy_snappy-java-1.1.10.1.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.259+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.1.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.xerial.snappy_snappy-java-1.1.10.1.jar
+[2024-01-20T19:23:47.264+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar at spark://45c5bfab8aa1:45349/files/org.slf4j_slf4j-api-2.0.6.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.264+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.slf4j_slf4j-api-2.0.6.jar
+[2024-01-20T19:23:47.267+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://45c5bfab8aa1:45349/files/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.267+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+[2024-01-20T19:23:47.282+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO SparkContext: Added file file:///home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://45c5bfab8aa1:45349/files/commons-logging_commons-logging-1.1.3.jar with timestamp 1705778626584
+[2024-01-20T19:23:47.283+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO Utils: Copying /home/***/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-61f51416-a97d-47ac-8b81-08c07745b61b/userFiles-7639000e-82c9-4655-bb65-15e0801eebfd/commons-logging_commons-logging-1.1.3.jar
+[2024-01-20T19:23:47.343+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://172.19.0.4:7077...
+[2024-01-20T19:23:47.380+0000] {spark_submit.py:571} INFO - 24/01/20 19:23:47 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master 172.19.0.4:7077
+[2024-01-20T19:23:47.381+0000] {spark_submit.py:571} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult:
+[2024-01-20T19:23:47.381+0000] {spark_submit.py:571} INFO - at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:322)
+[2024-01-20T19:23:47.382+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2024-01-20T19:23:47.382+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2024-01-20T19:23:47.383+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2024-01-20T19:23:47.383+0000] {spark_submit.py:571} INFO - at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:108)
+[2024-01-20T19:23:47.383+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[2024-01-20T19:23:47.383+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2024-01-20T19:23:47.384+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2024-01-20T19:23:47.384+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2024-01-20T19:23:47.384+0000] {spark_submit.py:571} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2024-01-20T19:23:47.385+0000] {spark_submit.py:571} INFO - Caused by: java.io.IOException: Failed to connect to /172.19.0.4:7077
+[2024-01-20T19:23:47.385+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:284)
+[2024-01-20T19:23:47.385+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:214)
+[2024-01-20T19:23:47.385+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:226)
+[2024-01-20T19:23:47.386+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.createClient(NettyRpcEnv.scala:204)
+[2024-01-20T19:23:47.386+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:202)
+[2024-01-20T19:23:47.386+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:198)
+[2024-01-20T19:23:47.386+0000] {spark_submit.py:571} INFO - ... 4 more
+[2024-01-20T19:23:47.387+0000] {spark_submit.py:571} INFO - Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /172.19.0.4:7077
+[2024-01-20T19:23:47.387+0000] {spark_submit.py:571} INFO - Caused by: java.net.ConnectException: Connection refused
+[2024-01-20T19:23:47.387+0000] {spark_submit.py:571} INFO - at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+[2024-01-20T19:23:47.387+0000] {spark_submit.py:571} INFO - at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)
+[2024-01-20T19:23:47.388+0000] {spark_submit.py:571} INFO - at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+[2024-01-20T19:23:47.388+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+[2024-01-20T19:23:47.388+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+[2024-01-20T19:23:47.388+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2024-01-20T19:23:47.389+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2024-01-20T19:23:47.389+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2024-01-20T19:23:47.389+0000] {spark_submit.py:571} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-01-20T19:23:47.389+0000] {spark_submit.py:571} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-01-20T19:23:47.389+0000] {spark_submit.py:571} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-01-20T19:23:47.390+0000] {spark_submit.py:571} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2024-01-20T19:24:07.344+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:07 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://172.19.0.4:7077...
+[2024-01-20T19:24:07.350+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:07 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master 172.19.0.4:7077
+[2024-01-20T19:24:07.354+0000] {spark_submit.py:571} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult:
+[2024-01-20T19:24:07.354+0000] {spark_submit.py:571} INFO - at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:322)
+[2024-01-20T19:24:07.354+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2024-01-20T19:24:07.355+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2024-01-20T19:24:07.355+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2024-01-20T19:24:07.355+0000] {spark_submit.py:571} INFO - at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:108)
+[2024-01-20T19:24:07.355+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[2024-01-20T19:24:07.356+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2024-01-20T19:24:07.356+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2024-01-20T19:24:07.356+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2024-01-20T19:24:07.356+0000] {spark_submit.py:571} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2024-01-20T19:24:07.357+0000] {spark_submit.py:571} INFO - Caused by: java.io.IOException: Failed to connect to /172.19.0.4:7077
+[2024-01-20T19:24:07.357+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:284)
+[2024-01-20T19:24:07.357+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:214)
+[2024-01-20T19:24:07.357+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:226)
+[2024-01-20T19:24:07.357+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.createClient(NettyRpcEnv.scala:204)
+[2024-01-20T19:24:07.358+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:202)
+[2024-01-20T19:24:07.358+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:198)
+[2024-01-20T19:24:07.358+0000] {spark_submit.py:571} INFO - ... 4 more
+[2024-01-20T19:24:07.358+0000] {spark_submit.py:571} INFO - Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /172.19.0.4:7077
+[2024-01-20T19:24:07.358+0000] {spark_submit.py:571} INFO - Caused by: java.net.ConnectException: Connection refused
+[2024-01-20T19:24:07.359+0000] {spark_submit.py:571} INFO - at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+[2024-01-20T19:24:07.359+0000] {spark_submit.py:571} INFO - at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)
+[2024-01-20T19:24:07.359+0000] {spark_submit.py:571} INFO - at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+[2024-01-20T19:24:07.360+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+[2024-01-20T19:24:07.360+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+[2024-01-20T19:24:07.360+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2024-01-20T19:24:07.361+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2024-01-20T19:24:07.361+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2024-01-20T19:24:07.361+0000] {spark_submit.py:571} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-01-20T19:24:07.361+0000] {spark_submit.py:571} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-01-20T19:24:07.361+0000] {spark_submit.py:571} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-01-20T19:24:07.362+0000] {spark_submit.py:571} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2024-01-20T19:24:27.344+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:27 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://172.19.0.4:7077...
+[2024-01-20T19:24:27.348+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:27 WARN StandaloneAppClient$ClientEndpoint: Failed to connect to master 172.19.0.4:7077
+[2024-01-20T19:24:27.348+0000] {spark_submit.py:571} INFO - org.apache.spark.SparkException: Exception thrown in awaitResult:
+[2024-01-20T19:24:27.349+0000] {spark_submit.py:571} INFO - at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:322)
+[2024-01-20T19:24:27.349+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+[2024-01-20T19:24:27.349+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:102)
+[2024-01-20T19:24:27.349+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:110)
+[2024-01-20T19:24:27.350+0000] {spark_submit.py:571} INFO - at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anon$1.run(StandaloneAppClient.scala:108)
+[2024-01-20T19:24:27.350+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[2024-01-20T19:24:27.350+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[2024-01-20T19:24:27.350+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2024-01-20T19:24:27.351+0000] {spark_submit.py:571} INFO - at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2024-01-20T19:24:27.351+0000] {spark_submit.py:571} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2024-01-20T19:24:27.351+0000] {spark_submit.py:571} INFO - Caused by: java.io.IOException: Failed to connect to /172.19.0.4:7077
+[2024-01-20T19:24:27.351+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:284)
+[2024-01-20T19:24:27.352+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:214)
+[2024-01-20T19:24:27.352+0000] {spark_submit.py:571} INFO - at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:226)
+[2024-01-20T19:24:27.352+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.createClient(NettyRpcEnv.scala:204)
+[2024-01-20T19:24:27.353+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:202)
+[2024-01-20T19:24:27.353+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.Outbox$$anon$1.call(Outbox.scala:198)
+[2024-01-20T19:24:27.353+0000] {spark_submit.py:571} INFO - ... 4 more
+[2024-01-20T19:24:27.353+0000] {spark_submit.py:571} INFO - Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /172.19.0.4:7077
+[2024-01-20T19:24:27.353+0000] {spark_submit.py:571} INFO - Caused by: java.net.ConnectException: Connection refused
+[2024-01-20T19:24:27.354+0000] {spark_submit.py:571} INFO - at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+[2024-01-20T19:24:27.354+0000] {spark_submit.py:571} INFO - at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)
+[2024-01-20T19:24:27.354+0000] {spark_submit.py:571} INFO - at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+[2024-01-20T19:24:27.354+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+[2024-01-20T19:24:27.354+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+[2024-01-20T19:24:27.355+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+[2024-01-20T19:24:27.355+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+[2024-01-20T19:24:27.355+0000] {spark_submit.py:571} INFO - at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+[2024-01-20T19:24:27.355+0000] {spark_submit.py:571} INFO - at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+[2024-01-20T19:24:27.355+0000] {spark_submit.py:571} INFO - at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+[2024-01-20T19:24:27.356+0000] {spark_submit.py:571} INFO - at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+[2024-01-20T19:24:27.356+0000] {spark_submit.py:571} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2024-01-20T19:24:47.345+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 WARN StandaloneSchedulerBackend: Application ID is not initialized yet.
+[2024-01-20T19:24:47.349+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 ERROR StandaloneSchedulerBackend: Application has been killed. Reason: All masters are unresponsive! Giving up.
+[2024-01-20T19:24:47.352+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45731.
+[2024-01-20T19:24:47.354+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 INFO NettyBlockTransferService: Server created on 45c5bfab8aa1:45731
+[2024-01-20T19:24:47.354+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-01-20T19:24:47.362+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 45c5bfab8aa1, 45731, None)
+[2024-01-20T19:24:47.365+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 INFO BlockManagerMasterEndpoint: Registering block manager 45c5bfab8aa1:45731 with 434.4 MiB RAM, BlockManagerId(driver, 45c5bfab8aa1, 45731, None)
+[2024-01-20T19:24:47.367+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 45c5bfab8aa1, 45731, None)
+[2024-01-20T19:24:47.368+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 45c5bfab8aa1, 45731, None)
+[2024-01-20T19:24:47.482+0000] {spark_submit.py:571} INFO - 24/01/20 19:24:47 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2024-01-20T19:24:49.216+0000] {spark_submit.py:571} INFO - DataFrame[key: binary, value: binary, topic: string, partition: int, offset: bigint, timestamp: timestamp, timestampType: int]
+[2024-01-20T19:24:49.429+0000] {spark_submit.py:571} INFO - DataFrame[created_utc: string, subreddit: string, selftext: string, title: string, subreddit_name_prefixed: string, _comments_by_id: string, upvote_ratio: string, category: string, score: string, created: string, num_comments: string, url: string, view_count: string, send_replies: string]
+[2024-01-20T19:24:49.431+0000] {spark_submit.py:571} INFO - WARNING:cassandra.cluster:Cluster.__init__ called with contact_points specified, but no load_balancing_policy. In the next major version, this will raise an error; please specify a load-balancing policy. (contact_points = ['cassandra'], lbp = None)
+[2024-01-20T19:24:49.435+0000] {spark_submit.py:571} INFO - WARNING:cassandra.cluster:Downgrading core protocol version from 66 to 65 for 172.19.0.4:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+[2024-01-20T19:24:49.438+0000] {spark_submit.py:571} INFO - WARNING:cassandra.cluster:Downgrading core protocol version from 65 to 5 for 172.19.0.4:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+[2024-01-20T19:24:49.468+0000] {spark_submit.py:571} INFO - Keyspace created successfully!
+[2024-01-20T19:24:49.469+0000] {spark_submit.py:571} INFO - Tables created successfully!
+[2024-01-20T19:24:50.429+0000] {spark_submit.py:571} INFO - Traceback (most recent call last):
+[2024-01-20T19:24:50.430+0000] {spark_submit.py:571} INFO - File "/opt/***/shared_volume/stream_reddit.py", line 133, in <module>
+[2024-01-20T19:24:50.430+0000] {spark_submit.py:571} INFO - streaming_query = (selection_df.writeStream.format("org.apache.spark.sql.cassandra")
+[2024-01-20T19:24:50.430+0000] {spark_submit.py:571} INFO - File "/home/***/.local/lib/python3.9/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/streaming/readwriter.py", line 1385, in start
+[2024-01-20T19:24:50.431+0000] {spark_submit.py:571} INFO - return self._sq(self._jwrite.start())
+[2024-01-20T19:24:50.431+0000] {spark_submit.py:571} INFO - File "/home/***/.local/lib/python3.9/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2024-01-20T19:24:50.432+0000] {spark_submit.py:571} INFO - return_value = get_return_value(
+[2024-01-20T19:24:50.432+0000] {spark_submit.py:571} INFO - File "/home/***/.local/lib/python3.9/site-packages/pyspark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 169, in deco
+[2024-01-20T19:24:50.432+0000] {spark_submit.py:571} INFO - return f(*a, **kw)
+[2024-01-20T19:24:50.433+0000] {spark_submit.py:571} INFO - File "/home/***/.local/lib/python3.9/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2024-01-20T19:24:50.433+0000] {spark_submit.py:571} INFO - raise Py4JJavaError(
+[2024-01-20T19:24:50.433+0000] {spark_submit.py:571} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o64.start.
+[2024-01-20T19:24:50.434+0000] {spark_submit.py:571} INFO - : java.lang.IllegalStateException: RpcEnv has been stopped
+[2024-01-20T19:24:50.434+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.Dispatcher.registerRpcEndpoint(Dispatcher.scala:60)
+[2024-01-20T19:24:50.434+0000] {spark_submit.py:571} INFO - at org.apache.spark.rpc.netty.NettyRpcEnv.setupEndpoint(NettyRpcEnv.scala:136)
+[2024-01-20T19:24:50.435+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef$.forDriver(StateStoreCoordinator.scala:72)
+[2024-01-20T19:24:50.435+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.streaming.StreamingQueryManager.<init>(StreamingQueryManager.scala:52)
+[2024-01-20T19:24:50.435+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.internal.BaseSessionStateBuilder.streamingQueryManager(BaseSessionStateBuilder.scala:335)
+[2024-01-20T19:24:50.435+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.internal.BaseSessionStateBuilder.$anonfun$build$4(BaseSessionStateBuilder.scala:372)
+[2024-01-20T19:24:50.436+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.internal.SessionState.streamingQueryManager$lzycompute(SessionState.scala:97)
+[2024-01-20T19:24:50.436+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.internal.SessionState.streamingQueryManager(SessionState.scala:97)
+[2024-01-20T19:24:50.436+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.streaming.DataStreamWriter.startQuery(DataStreamWriter.scala:419)
+[2024-01-20T19:24:50.437+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.streaming.DataStreamWriter.startInternal(DataStreamWriter.scala:407)
+[2024-01-20T19:24:50.437+0000] {spark_submit.py:571} INFO - at org.apache.spark.sql.streaming.DataStreamWriter.start(DataStreamWriter.scala:249)
+[2024-01-20T19:24:50.437+0000] {spark_submit.py:571} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2024-01-20T19:24:50.437+0000] {spark_submit.py:571} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2024-01-20T19:24:50.438+0000] {spark_submit.py:571} INFO - at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2024-01-20T19:24:50.438+0000] {spark_submit.py:571} INFO - at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2024-01-20T19:24:50.438+0000] {spark_submit.py:571} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2024-01-20T19:24:50.438+0000] {spark_submit.py:571} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2024-01-20T19:24:50.438+0000] {spark_submit.py:571} INFO - at py4j.Gateway.invoke(Gateway.java:282)
+[2024-01-20T19:24:50.439+0000] {spark_submit.py:571} INFO - at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2024-01-20T19:24:50.439+0000] {spark_submit.py:571} INFO - at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2024-01-20T19:24:50.439+0000] {spark_submit.py:571} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2024-01-20T19:24:50.439+0000] {spark_submit.py:571} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2024-01-20T19:24:50.440+0000] {spark_submit.py:571} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2024-01-20T19:24:50.440+0000] {spark_submit.py:571} INFO - 
+[2024-01-20T19:24:50.607+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 502, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://172.19.0.4:7077 --conf spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2 --conf spark.jars.excludes=org.scala-lang:scala-reflect --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 --name arrow-spark --queue root.default --deploy-mode client /opt/***/shared_volume/stream_reddit.py. Error code is: 1.
+[2024-01-20T19:24:50.611+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=Stream_reddit_to_cassandra, task_id=submit_spark_job, execution_date=20240120T191948, start_date=20240120T192342, end_date=20240120T192450
+[2024-01-20T19:24:50.622+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 1151 for task submit_spark_job (Cannot execute: spark-submit --master spark://172.19.0.4:7077 --conf spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2 --conf spark.jars.excludes=org.scala-lang:scala-reflect --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.1 --name arrow-spark --queue root.default --deploy-mode client /opt/***/shared_volume/stream_reddit.py. Error code is: 1.; 1604)
+[2024-01-20T19:24:50.639+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-01-20T19:24:50.652+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
